@@ -1,0 +1,122 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Customer</title>
+{% endblock %}
+
+{% block content %}
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+       <div class="row">        
+          
+         <div class="col-lg-12 mt-5">
+                          <div class="card">
+                            <div class="card-body" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 100px;">
+                                <div class="invoice-area">
+                                    <div class="invoice-head">
+                                        <div class="row">
+                                            <div class="iv-right col-6">   
+                                                <img src="/static/assets/images/balizero.png" style="max-width: 100px;">                
+                                                            
+                                            </div> 
+                                            <div class="iv-right col-6 text-md-right">
+                                                <h3>Invoice</h3>                                                
+                                                <span>{{booking.url}}</span>              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 50px;">
+                                        <div class="col-md-6">
+                                            <div class="invoice-address">
+                                                <p style="font-weight: 600;">Invoiced to</p>
+                                                <span>{{booking.fullname}}<br>
+                                                {{booking.phone}} / {{booking.email}}</span>    
+                                            </div>
+                                        </div>
+
+                                       
+                                        <div class="col-md-6 text-md-right">
+                                            <div class="invoice-address">
+                                                <p style="font-weight: 600;">Invoice Date</p> 
+                                                <span>{{booking.created_date.strftime("%d %B %Y")}}</span>
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-table table-responsive mt-5">
+                                        <table class="table text-right">
+
+                                            <thead>
+                                                <tr class="text-capitalize">                   
+                                                    <th class="text-left" style="width: 25%; min-width: 130px;">Description</th>                                  
+                                                    <th style="width: 10%">Qty</th>
+                                                    <th style="width: 25%">Price</th>
+                                                    <th style="width: 25%">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                              
+                                                <tr>
+                                                    <td class="text-left"> {{booking.services}}</td>
+                                                    <td>1</td>
+                                                    <td>$ {{ "{:,}".format(booking.pricing).replace(",",",") }} </td>
+                                                    <td>$ {{ "{:,}".format(booking.pricing).replace(",",",") }}</td>
+                                                </tr> 
+                                                
+                                                <tr>
+                                                    <td class="text-left"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>Total : $ {{ "{:,}".format(booking.pricing).replace(",",",") }}</td>
+                                                </tr> 
+                                                  
+                                                                                                
+                                            </tbody>
+
+                                            
+                                        </table>
+                                        
+                                    </div>
+                                   
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3 style="font-weight: 600;">Notes</h3>
+                                        <p>For payment through Transfert Wise (Wise), please direct the payment to :
+                                          <br>BIC/SWIFT: TRWIBEB1XXX  IBAN: BE87 9670 8610 0394<br>
+                                          Wise Address: Avenue Louise 54, Room S52, Brussels, 1050, Belgium<br>
+                                          Account name: Gaetano Merola 
+                                        </p>
+                                    </div>    
+                               
+                                    <br>
+                                    <br>
+                                    <div class="col-md-6">
+                                                                                                                     
+  
+                                    </div>
+                                </div>                     
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" style="margin-top: 50px; margin-bottom: 200px;">
+                         
+                          
+                           
+                    </div>  
+                </div>
+
+
+
+      </div>  
+        
+    </div>
+</main>
+
+{% endblock %}
+    
+  

@@ -1,0 +1,47 @@
+<!doctype html>
+<form method="POST">
+    <select id="system">
+        <option></option>
+    </select>
+    <select id="game"></select>
+    <select id="characters"></select>
+    <button type="submit">Play</button>
+</form>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    "use strict";
+
+    var systems = {{ systems|tojson }};
+
+    var form = $('form');
+    var system = $('select#system');
+    var game = $('select#game');
+    var characters = $('select#characters');
+
+    for (var key in systems) {
+        system.append($('<option/>', {'value': key, 'text': key}));
+    }
+
+    system.change(function(ev) {
+        game.empty();
+        game.append($('<option/>'));
+
+        var games = systems[system.val()];
+
+        for (var i in games) {
+            game.append($('<option/>', {'value': i, 'text': i}));
+        }
+    });
+    
+    game.change(function(evV) {
+        characters.empty();
+        characters.append($('<option/>'));
+
+        var games = systems[system.val()][game.val()];
+
+        for (var i in games) {
+            characters.append($('<option/>', {'value': games[i], 'text': games[i]}));
+        }
+    });
+
+</script>

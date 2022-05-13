@@ -1,0 +1,157 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Customer</title>
+{% endblock %}
+
+{% block content %}
+<div id="tallModal" class="modal modal-wide fade" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Customer</h5>
+       
+      </div>
+      <div class="modal-body">
+        {% from "includes/_formhelpers.html" import render_field %}
+            <form method="POST" enctype="multipart/form-data" id="form">
+               {{ form.hidden_tag() }}
+               <div class="row">    
+                   <div class="col-md-4">
+                        <div class="form-group">
+                    {{ render_field(form.prefix, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>     
+                    <div class="col-md-4">
+                        <div class="form-group">
+                    {{ render_field(form.company, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>     
+                    <div class="col-md-4">
+                        <div class="form-group">
+                    {{ render_field(form.contact, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>       
+                    <div class="col-md-6">
+                        <div class="form-group">
+                    {{ render_field(form.url, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                    {{ render_field(form.amount, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>            
+                    <div class="col-md-6">
+                        <div class="form-group">
+                    {{ render_field(form.tipe, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>     
+                    <div class="col-md-6">
+                        <div class="form-group">
+                    {{ render_field(form.period, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>     
+                    
+                                       
+                </div>
+    
+      </div>
+
+      <div class="modal-footer">
+         <a href="/dashboard/customer" class="btn btn-outline-dark">Cancel</a>        
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="d-flex align-items-center">
+    <div class="container">
+       {% set monthly = Customer.query.filter_by(period="bulanan").all()  %} 
+       {% set yearly = Customer.query.filter_by(period="tahunan").all()  %} 
+
+       {% set total_monthly = monthly | sum(attribute='amount') %}
+       {% set total_yearly = yearly | sum(attribute='amount') %}
+
+       {% set ARR = total_monthly * 12 + total_yearly %}
+       {% set MRR = ARR / 12 %}
+
+       <div class="row">
+        <!-- MRR -->
+         <div class="col-sm-4" style="margin-top: 50px; margin-bottom: 50px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Total Customer</h5>
+              <p>{{ all_customer | length }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-top: 50px; margin-bottom: 50px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Total MRR</h5>
+              <p>Rp {{ "{:,}".format(MRR).replace(",",".") }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-top: 50px; margin-bottom: 50px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Total ARR</h5>
+              <p>Rp {{ "{:,}".format(ARR).replace(",",".") }}</p>
+            </div>
+          </div>
+        </div>
+        <!-- end of MRR -->
+
+
+         <div class="col-md-12" style="margin-bottom: 50px;">
+          <a data-toggle="modal" data-target="#exampleModalLong" class="btn btn-outline-dark float-right">+ Create Customer</a>
+          <h3 style="font-weight: bold; font-size: 22px;">{{tipe}} Customer</h3>
+        </div>      
+        <div class="col-md-12" style="margin-bottom: 50px;">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact</th>                
+                <th scope="col">Period</th>
+                <th scope="col">Tipe</th>
+                <th scope="col">Url</th>
+                <th scope="col">Prefix</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in all_customer |sort(attribute='company') %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{x.company}}</td>
+                <td>{{x.contact}}</td>                
+                <td>Rp {{ "{:,}".format(x.amount).replace(",",".") }} / {{x.period}}</td>
+                <td>{{x.tipe}}</td>
+                <td>{{x.url}}</td>
+                <td>{{x.prefix}}</td>
+                <td>
+                  <p class="dropdown-toggle" data-toggle="dropdown">menu</p>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/dashboard/customer/{{x.id}}/generate">generate invoice</a>
+                      <a class="dropdown-item" href="/dashboard/customer/{{x.id}}/edit">edit customer</a>
+                      <a class="dropdown-item" href="/dashboard/customer/{{x.id}}/delete">delete customer</a>
+                    </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>    
+        </div>           
+      </div>     
+
+    </div>
+</main>
+
+{% endblock %}
+    
+  

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bali Zero - Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="{{url_for ('static',filename='assets/css/animate.css')}}" rel="stylesheet"/>
+
+
+	<link href="{{url_for ('static',filename='assets/css/owl.carousel.min.css')}}" rel="stylesheet"/>
+
+	
+	<link href="{{url_for ('static',filename='assets/css/owl.theme.default.min.css')}}" rel="stylesheet"/>
+
+	
+	<link href="{{url_for ('static',filename='assets/css/magnific-popup.css')}}" rel="stylesheet"/>
+
+	<link href="{{url_for ('static',filename='assets/css/bootstrap-datepicker.css')}}" rel="stylesheet"/>
+	<link href="{{url_for ('static',filename='assets/css/jquery.timepicker.css')}}" rel="stylesheet"/>
+	
+	<link href="{{url_for ('static',filename='assets/css/flaticon.css')}}" rel="stylesheet"/>
+
+	<link href="{{url_for ('static',filename='assets/css/styles.css')}}" rel="stylesheet"/>
+	<link href="{{url_for ('static',filename='assets/css/timeline.css')}}" rel="stylesheet"/>
+	<link rel="shortcut icon" type="image/png" href="/static/assets/images/balizero.png"/>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="/">Bali Zero</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+					<li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+					
+					    <ul class="dropdown-menu">
+						  <li><a class="dropdown-item" href="/services/investor-kitas"> Investor Kitas </a></li>
+						  <li><a class="dropdown-item" href="/services/retirment-kitas"> Retirment Kitas </a></li>
+						  <li><a class="dropdown-item" href="/services/spouse-kitas"> Spouse Kitas </a></li>
+						  <li><a class="dropdown-item" href="/services/working-kitas"> Working Kitas </a></li>
+						  <li><a class="dropdown-item" href="/services/freelance-kitas"> Freelance Kitas </a></li>
+						  <li><a class="dropdown-item" href="/services/social-visa-onshore"> Social Visa Onshore </a></li>
+						  <li><a class="dropdown-item" href="/services/business-visa-onshore"> Business Visa Offshore </a></li>
+						  <li><a class="dropdown-item" href="/services/set-up-pt-pma"> Set Up PT PMA </a></li>
+						  <li><a class="dropdown-item" href="/services/cozero-living"> COZero Living </a></li>
+						
+					    </ul>
+					</li>
+					<li class="nav-item"><a href="/tracking" class="nav-link">Tracking</a></li>
+					<li class="nav-item"><a href="/#blog" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+
+	<div class="hero-wrap js-fullheight" style="background-image: url('/static/assets/images/yoga.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<span class="subheading">Welcome to Bali Zero</span>
+					<h1 class="mb-4">Most Recommended Visa Application Center in Bali
+					</h1>
+					<p>No 1 Google Review Rating in Indonesia</p>
+					<!--
+					<p class="caps">Travel to the any corner of the world, without going around in circles</p>-->
+					<p><a href="#" class="btn btn-primary py-3 px-4">Apply Now</a></p>
+				</div>
+				<!--
+				<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<span class="fa fa-play"></span>
+				</a> -->
+			</div>
+		</div>
+	</div>
+
+	<section class="ftco-section ftco-no-pb ftco-no-pt">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="ftco-search d-flex justify-content-center">
+						<div class="row">
+							<div class="col-md-12 nav-link-wrap">
+								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Which Visa Type Should I Apply</a>
+
+									
+									<a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Track My Visa</a>
+
+								</div>
+							</div>
+							<div class="col-md-12 tab-wrap">
+								
+								<div class="tab-content" id="v-pills-tabContent">
+
+									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+										 <form method="POST">
+							               									
+											<div class="row no-gutters">
+												
+												<div class="col-md d-flex">
+													<div class="form-group p-4  border-0">
+														<select id="system"><option></option> </select>
+													</div>
+												</div>
+												<div class="col-md d-flex">
+													<div class="form-group p-4  border-0">
+														<select id="game"></select>
+													</div>
+												</div>
+												
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														
+													</div>
+												</div>
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														
+													</div>
+												</div>
+												
+												
+												<div class="col-md d-flex">
+													<div class="form-group d-flex w-100 border-0">
+														<div class="form-field w-100 align-items-center d-flex">
+															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									
+									<div class="tab-pane fade show" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+										<form action="#" class="search-property-1">
+											<div class="row no-gutters">
+
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#">Invoice Number </label>
+														<div class="form-field">
+															
+															<input type="text" class="form-control" placeholder="Invoice number">
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#"></label>
+														<div class="form-field">
+															
+															<input type="text" class="form-control" placeholder="" disabled="disabled">
+														</div>
+													</div>
+												</div>	
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#"></label>
+														<div class="form-field">
+															
+															<input type="text" class="form-control" placeholder="" disabled="disabled">
+														</div>
+													</div>
+												</div>	
+												<div class="col-md d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#"></label>
+														<div class="form-field">
+															
+															<input type="text" class="form-control" placeholder="" disabled="disabled">
+														</div>
+													</div>
+												</div>	
+												
+												
+												<div class="col-md d-flex">
+													<div class="form-group d-flex w-100 border-0">
+														<div class="form-field w-100 align-items-center d-flex">
+															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-section services-section" id="process">
+			<div class="container">
+				<div class="row">
+					
+				</div>	
+
+				
+				<div class="row d-flex">
+					<div class="col-md-12 heading-section  d-flex align-items-center">
+						<div class="w-100">
+							
+							<h2 class="mb-4">Believe in The Process </h2>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+														
+						</div>
+					</div>
+					<div class="col-md-12">        <!-- apply-style-two -->
+				        <section class="apply-style-two">
+				            <div class="auto-container">
+				                
+								<div class="row clearfix">
+									
+									<div class="col-lg-3 col-md-6 col-sm-12 single-column">
+										<div class="single-item wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+											<div class="inner-box"><h6>SATU</h6>
+												<div class="icon-box">
+													<div class="arrow" style="background-image: url(https://balisolve.com/themes/frontend/default/images/arrow-1.png);"><br></div>
+													<i class="fa fa-upload"></i>
+												</div><h6><a href="#" style="color: #000 !important;">1. Upload Your Document</a></h6>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 col-sm-12 single-column">
+										<div class="single-item wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+											<div class="inner-box"><h6>DUA</h6>
+												<div class="icon-box">
+													<div class="arrow" style="background-image: url(https://balisolve.com/themes/frontend/default/images/arrow-1.png);"><br></div>
+													<i class="fa fa-money"></i>
+												</div>
+												<h6><a href="#" <a href="#" style="color: #000 !important;">2. Complete Your Payment</a></h6>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 col-sm-12 single-column">
+										<div class="single-item wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+											<div class="inner-box"><h6>TIGA</h6>
+												<div class="icon-box">
+													<div class="arrow" style="background-image: url(https://balisolve.com/themes/frontend/default/images/arrow-1.png);"><br></div>
+												<i class="fa fa-search"></i>
+												</div>
+												<h6><a href="#" <a href="#" style="color: #000 !important;">3. Track Your Visa Status </a></h6>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6 col-sm-12 single-column">
+										<div class="single-item wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+											<div class="inner-box"><h6>EMPAT</h6>
+												<div class="icon-box">
+													<i class="fa fa-file"></i>
+												</div><h6><a href="#" <a href="#" style="color: #000 !important;">4. Get Your Visa</a>
+												</h6>
+											</div>
+										</div>
+									</div>
+
+							</div>        
+						</section>
+				        <!-- apply-style-two -->   		
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--
+
+
+
+		<section class="ftco-section services-section" id="process">
+			<div class="container">
+				<div class="row">
+					
+				</div>	
+
+				
+				<div class="row d-flex">
+					<div class="col-md-12 heading-section  d-flex align-items-center">
+						<div class="w-100">
+							
+							<h2 class="mb-4">Believe in The Process </h2>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							<br>
+							<br>
+							<br>
+							
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-2 col-sm-1 col-xs-1"></div>
+							<div class="col-md-10 col-sm-11 col-xs-11">
+<section class="main-timeline-section">
+<div class="conference-center-line"></div>
+<div class="conference-timeline-content">
+<div class="timeline-article timeline-article-bottom">
+<div class="content-date">
+
+</div>
+<div class="meta-date"></div>
+<div class="content-box">
+	<img src="/static/assets/images/passport.png" style="max-width: 50px;">
+<p style="font-weight: 600; padding-top: 10px;"><span>5.</span> Get Your <br> Visa</p>
+
+</div>
+</div>	
+<div class="timeline-article timeline-article-top">
+<div class="content-date">
+
+</div>
+<div class="meta-date"></div>
+<div class="content-box">
+	<img src="/static/assets/images/search.png" style="max-width: 50px;">
+<p style="font-weight: 600; padding-top: 10px;"><span>4.</span> Track Your <br>Status</p>
+
+</div>
+</div>
+<div class="timeline-article timeline-article-bottom">
+<div class="content-date">
+
+</div>
+<div class="meta-date"></div>
+<div class="content-box">
+<img src="/static/assets/images/operation.png" style="max-width: 50px;">	
+<p style="font-weight: 600; padding-top: 10px;"><span>3.</span> Complete The Payment</p>
+
+</div>
+</div>
+<div class="timeline-article timeline-article-top">
+<div class="content-date">
+
+</div>
+<div class="meta-date"></div>
+<div class="content-box">
+	<img src="/static/assets/images/file.png" style="max-width: 50px;">
+<p style="font-weight: 600; padding-top: 10px;"><span>2.</span> Upload Your Document</p>
+</div>
+</div>
+<div class="timeline-article timeline-article-bottom">
+<div class="content-date">
+
+</div>
+<div class="meta-date"></div>
+<div class="content-box">
+<img src="/static/assets/images/resume.png" style="max-width: 50px;">	
+<p style="font-weight: 600; padding-top: 10px;"><span>1.</span> Create Your Account</p>
+
+</div>
+</div>
+
+</div>
+<div class="timeline-end"></div>
+</section>
+</div>
+							
+       					</div>
+							
+							
+														
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+-->		
+
+		<section class="ftco-section" style="background-color: #000000; ">
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 heading-section text-center ftco-animate">
+						<span class="subheading">Our Services</span>
+						<h2 class="mb-4" style="color: #fff;">All The Immigrations Services You Need</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container text-center my-3">
+    <div class="row mx-auto my-auto">
+        <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item py-5 active">
+                    <div class="row">                    	
+                        <div class="col-md-4 ftco-animate">
+                        	
+				          	<div class="project-wrap">
+					             <a href="/services/investor-kitas" class="img" style="background-image: url(/static/assets/images/wok2.jpeg);">	
+					              <span class="price">$1,200/year</span>	               
+					            </a>
+					            <div class="text p-4">
+					         		<a href="/services/investor-kitas">
+					                <span class="days">Investor Kitas</span>
+					                <h3 style="font-size: 14px;">Foreign Shareholder Visa</h3>
+					            	</a>
+					           </div>
+				      	  	</div>
+				      	  	
+				   		</div>
+				   		
+				   		<div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/retirment-kitas" class="img" style="background-image: url(/static/assets/images/retirment.jpeg);">	
+					              <span class="price">$700</span>	               
+					            </a>
+					            
+					            <div class="text p-4">
+					            	<a href="/services/retirment-kitas">
+					                <span class="days">Retirement Kitas</span>
+					                <h3 style="font-size: 14px;">Over 55 Years Old Visa</h3>
+					                </a>
+					           </div>
+					       		
+				      	  	</div>
+				   		</div>
+				   		
+				   		<div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/spouse-kitas" class="img" style="background-image: url(/static/assets/images/spouse.jpeg);">	
+					              <span class="price">$1,000</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/spouse-kitas">
+					                <span class="days">Spouse Kitas</span>
+					                <h3 style="font-size: 14px;">Marriage Visa</h3>
+					            	</a>
+					                
+					           </div>
+				      	  	</div>
+				   		</div>
+                        
+                    </div>
+                </div>
+                
+               
+                <div class="carousel-item py-5">
+                    <div class="row">
+                        <div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/working-kitas" class="img" style="background-image: url(/static/assets/images/working.jpeg);">	
+					              <span class="price">$1,000/year</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/working-kitas">
+					                <span class="days">Working Kitas</span>
+					                <h3 style="font-size: 14px;">Working Permit (Employee)</h3>
+					            	</a>
+					                
+					           </div>
+				      	  	</div>
+				   		</div>
+                        <div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/freelance-kitas" class="img" style="background-image: url(/static/assets/images/hero-bg.jpeg);">	
+					              <span class="price">$1,200/year</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/freelance-kitas">
+					                <span class="days">Freelance Kitas</span>
+					                <h3 style="font-size: 14px;">Working Permit (No Employee)</h3>
+					            </a>
+					                
+					           </div>
+				      	  	</div>
+				   		</div>
+				   		<div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/social-visa-onshore" class="img" style="background-image: url(/static/assets/images/airport.jpeg);">	
+					              <span class="price">$700</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/social-visa-onshore">
+					                <span class="days">Social Visa Onshore</span>
+					                <h3 style="font-size: 14px;">Stay Permit Up To 150 Days</h3>
+					            </a>
+					                
+					           </div>
+				      	  	</div>
+				   		</div>
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">
+                        <div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/business-visa-offshore" class="img" style="background-image: url(/static/assets/images/pma.jpeg);">	
+					              <span class="price">$700</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/business-visa-offshore">
+					                <span class="days">Business Visa Offshore</span>
+					                <h3 style="font-size: 14px;">Entry Permit Up To 180 Days</h3>
+					            </a>
+					                
+					           </div>
+				      	  	</div>
+				   		</div>
+                       <div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/set-up-pt-pma" class="img" style="background-image: url(/static/assets/images/investment.jpeg);">	
+					              <span class="price">$700</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/set-up-pt-pma">
+					                <span class="days">Set Up PT PMA</span>
+					                <h3 style="font-size: 14px;">Business Company</h3>
+					                </a>
+					           </div>
+				      	  	</div>
+				   		</div>
+
+				   		<div class="col-md-4 ftco-animate">
+				          	<div class="project-wrap">
+					             <a href="/services/cozero-living" class="img" style="background-image: url(/static/assets/images/coliving.jpeg);">	
+					              <span class="price">$700</span>	               
+					            </a>
+					            <div class="text p-4">
+					            	<a href="/services/cozero-living">
+					                <span class="days">Co-Living Space </span>
+					                <h3 style="font-size: 14px;">COZero Living</h3>
+					                </a>
+					           </div>
+				      	  	</div>
+				   		</div>
+
+                    </div>
+                </div>
+
+
+            </div>
+             	<a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+                <span class="fa fa-chevron-left"  style="color: #ff0000;" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+	                <span class="fa fa-chevron-right" style="color: #ff0000;"  aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+		</section>
+
+		
+		
+
+		<section class="ftco-section ftco-about img"style="background-image: url(/static/assets/images/team1.JPG);">
+			<div class="overlay"></div>
+			<div class="container py-md-5">
+				<div class="row py-md-5">
+					<div class="col-md d-flex align-items-center justify-content-center">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-about ftco-no-pt img" id="about">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-md-12 about-intro">
+						<div class="row">
+							
+							<div class="col-md-12 pl-md-5 py-5">
+								<div class="row justify-content-start pb-3">
+									<div class="col-md-12 heading-section ftco-animate">
+										<span class="subheading">About Us</span>
+										<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+										<p><a href="#" class="btn btn-primary">Apply Now</a></p>
+									</div>
+								</div>
+							</div>			
+							<div class="row">		
+								<div class="col-md-1"></div>
+							<div class="col-md-2">
+								<img src="/static/assets/images/team/Slide2.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+								<h2 class="text-center team">Team Name</h2>
+								<p class="text-center">Posistion or Job Desc</p>
+							</div>	
+							<div class="col-md-2">
+								<img src="/static/assets/images/team/Slide3.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+								<h2 class="text-center team">Team Name</h2>
+								<p class="text-center">Posistion or Job Desc</p>
+							</div>	
+							<div class="col-md-2">
+								<img src="/static/assets/images/team/Slide4.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+								<h2 class="text-center team">Team Name</h2>
+								<p class="text-center">Posistion or Job Desc</p>
+							</div>		
+							<div class="col-md-2">
+								<img src="/static/assets/images/team/Slide5.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+								<h2 class="text-center team">Team Name</h2>
+								<p class="text-center">Posistion or Job Desc</p>
+							</div>		
+							<div class="col-md-2">
+								<img src="/static/assets/images/team/Slide6.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+								<h2 class="text-center team">Team Name</h2>
+								<p class="text-center">Posistion or Job Desc</p>
+							</div>		
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section testimony-section bg-bottom" style="background-image: url(/static/assets/images/bg_1.jpg);" id="testimonial">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 text-center heading-section heading-section-white ftco-animate">
+						<span class="subheading">Testimonial</span>
+						<h2 class="mb-4">Bali Zero Community Feedback</h2>
+					</div>
+				</div>
+				<div class="row ftco-animate">
+					<div class="col-md-12">
+						<div class="carousel-testimony owl-carousel">
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4" style="font-size: 13px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(/static/assets/images/person_1.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4"  style="font-size: 13px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(/static/assets/images/person_2.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4"  style="font-size: 13px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(/static/assets/images/person_3.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4" style="font-size: 13px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(/static/assets/images/person_1.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-wrap py-4">
+									<div class="text">
+										<p class="star">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</p>
+										<p class="mb-4" style="font-size: 13px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<div class="d-flex align-items-center">
+											<div class="user-img" style="background-image: url(/static/assets/images/person_2.jpg)"></div>
+											<div class="pl-3">
+												<p class="name">Roger Scott</p>
+												<span class="position">Marketing Manager</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="ftco-section" id="blog">
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 heading-section text-center ftco-animate">
+						<span class="subheading">Stay Update</span>
+						<h2 class="mb-4">Our Blog & Instagram</h2>
+					</div>
+				</div>				
+			</div>
+			<div class="container text-center my-3">
+			    <div class="row mx-auto my-auto">
+			        <div id="BlogCarousel" class="carousel slide w-100" data-ride="carousel">
+			            <div class="carousel-inner" role="listbox">
+			                <div class="carousel-item py-5 active">
+			                    <div class="row">                    	
+			                        <div class="col-md-8 ftco-animate">
+								           <h3 style="text-align: left;">This is Blog Title</h3>  
+								           <p style="text-align: left;">Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+								           <p style="text-align: left;">Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+							   		</div>
+							   		
+							   		<div class="col-md-4 ftco-animate">
+							          	<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZja-HKJBYb/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CZja-HKJBYb/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CZja-HKJBYb/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Bali Zero (@balizero0)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+							   		</div>
+							   									   					                        
+			                    </div>
+			                </div>
+			                
+			               
+			                <div class="carousel-item py-5">
+			                    <div class="row">
+			                        <div class="col-md-8 ftco-animate">
+								           <h3 style="text-align: left;">This is Blog Title</h3>  
+								           <p style="text-align: left;">Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+								           <p style="text-align: left;">Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+							   		</div>
+			                        <div class="col-md-4 ftco-animate">
+							          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZWJ-fIJgR2/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CZWJ-fIJgR2/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CZWJ-fIJgR2/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Bali Zero (@balizero0)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+							   		</div>
+							   		
+			                    </div>
+			                </div>
+			                
+			            </div>
+			             	<a class="carousel-control-prev text-dark" href="#BlogCarousel" role="button" data-slide="prev">
+			                <span class="fa fa-chevron-left"  style="color: #ff0000;" aria-hidden="true"></span>
+			                <span class="sr-only">Previous</span>
+				            </a>
+				            <a class="carousel-control-next text-dark" href="#BlogCarousel" role="button" data-slide="next">
+				                <span class="fa fa-chevron-right" style="color: #ff0000;"  aria-hidden="true"></span>
+				                <span class="sr-only">Next</span>
+				            </a>
+			        </div>
+			    </div>
+			</div>
+		</section>
+
+		<section class="ftco-footer bg-bottom ftco-no-pt grey" style="background-image: url(/static/assets/images/balilut.JPG);" id="contact">
+			<div class="overlay"></div>
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-lg-6 heading-section p-5">
+		      	<span class="subheading">Contact Us</span>
+				<h2 class="" style="color: #fff;">Get in Touch With Us</h2>
+				<br>
+				<p style="color: #fff;">Whatsapp : +62816117171</p>
+				<p style="color: #fff;">Email : info@balizero.com</p>
+				<p style="color: #fff;">Address : Jl. Raya Semer, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali, 80361</p>
+		      	
+		      </div>	
+		      <div class="col-lg-6">
+		        <form action="#" class="p-5 contact-form">
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Your Name">
+		          </div>
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Your Email">
+		          </div>
+		          <div class="form-group">						
+						<select class="form-control" id="cars" name="cars">
+		    <option value="volvo">Need Help</option>
+		    <option value="saab">Appointment</option>
+		    <option value="fiat">Payment Confirmation</option>
+		    <option value="audi">Consultation</option>
+		  </select>
+		          </div>
+		          <div class="form-group">
+		            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+		          </div>
+		          <div class="form-group">
+		            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+		          </div>
+		        </form>
+		        
+		      </div>
+		      
+		   </div>
+		 </div>
+		</section>
+				
+			
+
+
+
+			<script src="{{url_for ('static',filename='assets/js/jquery.min.js')}}" type="text/javascript"></script> 
+    
+		
+			<script src="{{url_for ('static',filename='assets/js/jquery-migrate-3.0.1.min.js')}}" type="text/javascript"></script> 
+
+			<script src="{{url_for ('static',filename='assets/js/popper.min.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/bootstrap.min.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/jquery.easing.1.3.js')}}" type="text/javascript"></script> 
+
+			<script src="{{url_for ('static',filename='assets/js/jquery.waypoints.min.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/jquery.stellar.min.js')}}" type="text/javascript"></script> 
+
+	
+			<script src="{{url_for ('static',filename='assets/js/owl.carousel.min.js')}}" type="text/javascript"></script> 
+
+		
+			<script src="{{url_for ('static',filename='assets/js/jquery.magnific-popup.min.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/jquery.animateNumber.min.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/bootstrap-datepicker.js')}}" type="text/javascript"></script> 
+
+			
+			<script src="{{url_for ('static',filename='assets/js/scrollax.min.js')}}" type="text/javascript"></script> 
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+			
+			
+			<script src="{{url_for ('static',filename='assets/js/main.js')}}" type="text/javascript"></script> 
+			
+			<script type="text/javascript">
+   $(document).ready(function() {
+  $('#tallModal').modal('show');
+});
+ </script>     
+
+<script type="text/javascript">
+	$('#myCarousel').carousel({
+  interval: 5000
+})
+
+</script>
+
+<script type="text/javascript">
+	$('#BlogCarousel').carousel({
+  interval: 5000
+})
+
+</script>
+
+
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    "use strict";
+
+    var systems = {{ systems|tojson }};
+
+    var form = $('form');
+    var system = $('select#system');
+    var game = $('select#game');
+    var characters = $('select#characters');
+
+    for (var key in systems) {
+        system.append($('<option/>', {'value': key, 'text': key}));
+    }
+
+    system.change(function(ev) {
+        game.empty();
+        game.append($('<option/>'));
+
+        var games = systems[system.val()];
+
+        for (var i in games) {
+            game.append($('<option/>', {'value': i, 'text': i}));
+        }
+    });
+    
+    game.change(function(evV) {
+        characters.empty();
+        characters.append($('<option/>'));
+
+        var games = systems[system.val()][game.val()];
+
+        for (var i in games) {
+            characters.append($('<option/>', {'value': games[i], 'text': games[i]}));
+        }
+    });
+
+</script>
+
+		</body>
+		</html>
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route("/form")
+def ViewForm():
+    systems = {
+        'PlayStation': {'Spyro': ['1', '2', '3'], 'Crash': ['4', '5', '6'], 'Ico': ['7', '8']},
+        'N64': {'Mario Kart': ['Mario', 'Luigi'], 'Superman': ['12', '13', '14']}
+    }
+    
+    if request.method == "POST":
+
+        systemGet = request.form.get("system")
+        gameGet = request.form.get("game")
+        charactersGet = request.form.get("characters")
+        
+        print(systemGet)
+        print(gameGet)
+        print(charactersGet)
+
+        return redirect('temp.html')
+
+
+    return render_template("form.html",systems=systems)
+
+
+
+@app.route("/new")
+def NewViewForm():
+    systems = {
+        'Less than 30 days': {'Tourism': ['1', '2', '3'], 'Business/Other': ['4', '5', '6']},
+        'More than 1 month and less than 6 month': {'Staycation/Business/Work Remotely': ['Mario', 'Luigi'], 'work': ['12', '13', '14'], 'Investment': ['12', '13', '14']},
+        'Long term more than 6 month': {'Retired': ['1', '2', '3'], 'Married With Indonesian Citizen': ['4', '5', '6'], 
+        'Investment': ['4', '5', '6'],'Staycation/Business/Work Remotely': ['4', '5', '6'],'work': ['4', '5', '6']}
+    }
+    
+    if request.method == "POST":
+
+        systemGet = request.form.get("system")
+        gameGet = request.form.get("game")
+        charactersGet = request.form.get("characters")
+        
+        print(systemGet)
+        print(gameGet)
+        print(charactersGet)
+
+        return redirect('temp.html')
+
+
+    return render_template("new.html",systems=systems)    
+
+
+		

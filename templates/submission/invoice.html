@@ -1,0 +1,187 @@
+{% extends "layouts/sub.html" %}
+
+{% block content %}
+
+<style type="text/css">
+  .grey{
+  color:  grey;
+}
+</style>
+
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+       <div class="row">        
+         <div class="col-md-12" style="margin-bottom: 10px; margin-top: 50px;">          
+         
+        </div>      
+         <div class="col-lg-12 mt-5">
+                          <div class="card">
+                            <div class="card-body" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 100px;">
+                                <div class="invoice-area">
+                                    <div class="invoice-head">
+                                        <div class="row">
+                                            <div class="iv-right col-6">   
+                                                <img src="/static/assets/images/balizero.png" style="max-width: 100px;">                
+                                                            
+                                            </div> 
+                                            <div class="iv-right col-6 text-md-right">
+                                                <h3>Invoice</h3>                                                
+                                                <span>{{booking.url}}</span>              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 50px;">
+                                        <div class="col-md-6">
+                                            <div class="invoice-address">
+                                                <p style="font-weight: 600;">Invoiced to</p>
+                                                <span>{{booking.fullname}}<br>
+                                                {{booking.phone}} / {{booking.email}}</span>    
+                                            </div>
+                                        </div>
+
+                                       
+                                        <div class="col-md-6 text-md-right">
+                                            <div class="invoice-address">
+                                                <p style="font-weight: 600;">Invoice Date</p> 
+                                                <span>{{booking.created_date.strftime("%d %B %Y")}}</span>
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-table table-responsive mt-5">
+                                        <table class="table text-right">
+
+                                            <thead>
+                                                <tr class="text-capitalize">                   
+                                                    <th class="text-left" style="width: 25%; min-width: 130px;">Description</th>                                  
+                                                    <th style="width: 10%">Qty</th>
+                                                    <th style="width: 25%">Price</th>
+                                                    <th style="width: 25%">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                              
+                                                <tr>
+                                                    <td class="text-left"> {{booking.services}}</td>
+                                                    <td>1</td>
+                                                    <td>$ {{ "{:,}".format(pricing).replace(",",",") }} </td>
+                                                    <td>$ {{ "{:,}".format(pricing).replace(",",",") }}</td>
+                                                </tr> 
+                                                
+                                                <tr>
+                                                    <td class="text-left"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>Total : $ {{ "{:,}".format(pricing).replace(",",",") }}</td>
+                                                </tr> 
+                                                  
+                                                                                                
+                                            </tbody>
+
+                                            
+                                        </table>
+                                        
+                                    </div>
+                                   
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {% if booking.paymentmethod == "Transferwise" %} 
+                                        <h3 style="font-weight: 600;">Notes</h3>
+                                        <p>For payment through Transfert Wise (Wise), please direct the payment to :
+                                          <br><span class="grey">BIC/SWIFT:</span> TRWIBEB1XXX  <span class="grey">IBAN:</span> BE87 9670 8610 0394<br>
+                                         <span class="grey">Wise Address:</span> Avenue Louise 54, Room S52, Brussels, 1050, Belgium<br>
+                                          <span class="grey">Account name</span>: Gaetano Merola 
+                                        </p>
+
+                                        {% else %}
+
+                                        <h3 style="font-weight: 600;">Notes</h3>
+                                        <p>For payment through Bank Transfer, please contact us at info@balizero.com reporting the invoice number and the amount that you want to pay</p>
+
+                                        {% endif %} 
+                                         
+                                    </div>    
+                               
+                                    <br>
+                                    <br>
+                                    <div class="col-md-6">
+                                      {% if booking.paymentmethod == "Transferwise" %}  
+                                      
+                                      <a href="https://wise.com/invite/u/gaetanom41" class="btn btn-outline-dark float-right" style="margin: 5px;">Pay Invoice Via Transferwise</a>
+                                      {% else %}  
+                                        
+  
+
+                                      <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AcECa-COA_BVDzUTIy5ewmYUOdUfUeyx3hvpl7Rhrm3dDaDW_F1hW1PdZYyJwxxWSfvucxEgIjSNu6A-&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Visa ","amount":{"currency_code":"USD","value":"{{pricing }}"}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h6>Thank you for your payment!</h6>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+    
+    {% endif %}  
+                                    </div>
+                                </div>                     
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" style="margin-top: 50px; margin-bottom: 200px;">
+                         
+                          
+                           
+                    </div>  
+                </div>
+
+
+
+      </div>  
+        
+    </div>
+</main>
+
+{% endblock %}

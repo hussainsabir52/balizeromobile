@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bali Zero - Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="{{url_for ('static',filename='assets/css/animate.css')}}" rel="stylesheet"/>
+
+
+  <link href="{{url_for ('static',filename='assets/css/owl.carousel.min.css')}}" rel="stylesheet"/>
+
+  
+  <link href="{{url_for ('static',filename='assets/css/owl.theme.default.min.css')}}" rel="stylesheet"/>
+
+  
+  <link href="{{url_for ('static',filename='assets/css/magnific-popup.css')}}" rel="stylesheet"/>
+
+  <link href="{{url_for ('static',filename='assets/css/bootstrap-datepicker.css')}}" rel="stylesheet"/>
+  <link href="{{url_for ('static',filename='assets/css/jquery.timepicker.css')}}" rel="stylesheet"/>
+  
+  <link href="{{url_for ('static',filename='assets/css/flaticon.css')}}" rel="stylesheet"/>
+
+  <link href="{{url_for ('static',filename='assets/css/style.css')}}" rel="stylesheet"/>
+  
+  <link href="{{url_for ('static',filename='assets/css/time.css')}}" rel="stylesheet"/> 
+  <link href="{{url_for ('static',filename='assets/css/new_timeline.css')}}" rel="stylesheet"/>
+
+
+
+<link rel="shortcut icon" type="image/png" href="/static/assets/images/balizero.png"/>
+
+
+
+
+<style type="text/css">
+.vl {
+  border-left: 6px solid #040e26;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  top: 0;
+  margin-top: -10px;
+}
+
+  .float{
+  position:fixed;
+  width:100px;
+  height:100px;
+  bottom:40px;
+  right:40px; 
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+
+}
+
+.my-float{
+  margin-top:22px;
+}
+
+
+#float {
+            display: none;
+        }
+</style>
+
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/static/assets/images/balizero.png" style="max-width: 40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Services  </a>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/services/business-visa-offshore"> Business Visa Offshore</a></li>             
+              <li><a class="dropdown-item" href="/services/social-visa-onshore"> Social Visa Onshore </a></li>
+              <li><a class="dropdown-item" href="/services/multi-entry"> Business Visa Multi Entry </a></li>
+              <li><a class="dropdown-item" href="#"> Other Services &raquo </a>
+               <ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="/services/investor-kitas"> Investor Kitas </a></li>
+                <li><a class="dropdown-item" href="/services/retirment-kitas"> Retirment Kitas </a></li>
+                <li><a class="dropdown-item" href="/services/spouse-kitas"> Spouse Kitas </a></li>
+                <li><a class="dropdown-item" href="/services/working-kitas"> Working Kitas </a></li>
+                <li><a class="dropdown-item" href="/services/freelance-kitas"> Freelance Kitas </a></li>
+                <li><a class="dropdown-item" href="/services/set-up-pt-pma"> Set Up PT PMA </a></li>
+                <li><a class="dropdown-item" href="/services/cozero-living"> COZero Living </a></li>
+                
+               </ul>
+              </li>
+             
+              </ul>
+          </li>
+          <li class="nav-item"><a href="/tracking#apply" class="nav-link">Tracking</a></li>
+          <li class="nav-item"><a href="/#blog" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="/#testimonial" class="nav-link">Testimonial</a></li>
+          <li class="nav-item"><a href="/#kontak" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  {% block content %}
+{% endblock %}
+  <div class="hero-wrap js-fullheight" style="background-image: url('/static/assets/images/yoga.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true" >
+        <div class="col-md-7 ftco-animate" style="margin-top: -140px !important;">
+          <span class="subheading" >Welcome to Bali Zero</span>
+          <h1 class="mb-4">Most Recommended Visa Application Center in Bali
+          </h1>
+          
+          <div id="apply"class="review-widget_net float-left" data-uuid="725cf030-8d24-49a9-b44f-9af6ed3e53ce" data-template="2" data-filter="" data-lang="en" data-theme="light"><a href="https://www.review-widget.net/" target="_blank" rel="noopener"><img src="https://grwapi.net/assets/spinner/spin.svg" title="Google Review Widget" alt="Review Widget" style="text-align: left !important;"></a></div><script async type="text/javascript" src="https://grwapi.net/widget.min.js"></script>
+          <br>
+          <br>
+          <!--
+          <p class="caps">Travel to the any corner of the world, without going around in circles</p>-->
+          <p><a href="/calling" class="btn btn-primary py-3 px-4">Bali Calling ?</a></p>
+          <br>
+        </div>
+        <!--
+        <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+          <span class="fa fa-play"></span>
+        </a> -->
+      </div>
+    </div>
+  </div>
+
+  <a href="wa.me/6281332982993" class="float" id="float">
+   
+<img src="https://i.pinimg.com/originals/3a/8d/ad/3a8dad7f872542a95103cb9ca74dc415.png">
+</a>
+
+  
+  <section class="ftco-section ftco-no-pb ftco-no-pt">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ftco-search d-flex justify-content-center">
+            <div class="row"  >
+              <div class="col-md-12 nav-link-wrap">
+                <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Which Visa Type Should I Apply</a>
+
+                  
+                  <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Track My Visa</a>
+
+                </div>
+              </div>
+              <div class="col-md-12 tab-wrap">
+                
+                <div class="tab-content" id="v-pills-tabContent">
+
+                  <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                    
+                           <form method="POST" action="" enctype="multipart/form-data" class="search-property-1">
+
+                                              
+                      <div class="row no-gutters">
+                        <div>
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4  border-0">
+                            <label for="qmt-vehicle">Stay Duration:</label>
+                            <div class="form-field">
+                            <select id="qmt-vehicle" name="vehicle" style="max-width: 220px;">
+                                <option></option>
+                                <option class="short" value="60">I’m going to stay less than 60 days</option>
+                                <option class="medium" value="61">I’m going to stay for more <br>than 2 months and maybe less than 6 months</option>
+                                <option class="long" value="180">Thinking to stay for long term. Probably more than 6 months</option>
+                            </select>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4  border-0">
+                            <label for="qmt-manufacturer">Purpose:</label>
+                            <div class="form-field">
+                            <select id="qmt-manufacturer" name="manufacturer">
+                                <option></option>
+                                <option class="short" value="Tourism">Tourism</option>
+                                <option class="short" value="Business">Business/Other</option>                               
+                                <option class="medium" value="Staycation">Staycation / Explore Bali</option>
+                                <option class="medium" value="Work">To work / to find job</option>
+                                <option class="medium" value="Investment">Investment</option>
+                                <option class="medium" value="Remotely">Work Remotely</option>
+
+                                <option class="long" value="Retired">I'm Retired</option>
+                                <option class="long" value="Married">I'm Married With Indonesian</option>
+                                <option class="long" value="Work">To work / to find job</option>
+                                <option class="long" value="Investment">Investment</option>
+                                <option class="long" value="Staycation">Staycation/Business/Remotely</option>
+                            </select>
+                            </div>
+                          </div>  
+                          
+                        </div>
+                        </div>
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="name">Name :</label>
+                            <div class="form-field">
+                              
+                              <input type="text" id="name" name="name"  class="form-control" placeholder="" style="font-size: 13px !important;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="name">Email :</label>
+                            <div class="form-field">
+                              
+                              <input type="text" id="email" name="email" type="email"  class="form-control" placeholder="" style="font-size: 13px !important;">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="col-md d-flex">
+                          <div class="form-group d-flex w-100 border-0">
+                            <div class="form-field w-100 align-items-center d-flex">
+                              <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" name="form1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                    <form method="POST" action="#" class="search-property-1">
+                      <div class="row no-gutters">
+
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="#">Invoice Number </label>
+                            <div class="form-field">
+                              
+                              <input type="text" name="tracking" id ="tracking" class="form-control" placeholder="Invoice number">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="#"></label>
+                            <div class="form-field">
+                              
+                              <input type="text" class="form-control" placeholder="" disabled="disabled">
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="#"></label>
+                            <div class="form-field">
+                              
+                              <input type="text" class="form-control" placeholder="" disabled="disabled">
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="col-md d-flex">
+                          <div class="form-group p-4 border-0">
+                            <label for="#"></label>
+                            <div class="form-field">
+                              
+                              <input type="text" class="form-control" placeholder="" disabled="disabled">
+                            </div>
+                          </div>
+                        </div>  
+                        
+                        
+                        <div class="col-md d-flex">
+                          <div class="form-group d-flex w-100 border-0">
+                            <div class="form-field w-100 align-items-center d-flex">
+                              <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" name="form2">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ftco-section services-section" id="process" style="padding-top: 2em !important; padding-bottom: 0em !important;">
+      <div class="container">
+        <div class="row">
+          
+        </div>  
+
+        
+        <div class="row d-flex">
+          <div class="col-md-12 heading-section  d-flex align-items-center">
+            <div class="w-100">
+              
+              <h2 class="mb-4 text-center">Believe in The Process </h2>
+              <p class="text-center">We want to make your visa application process easy, transparent, trustable. We want happy people to come safe and regular to the Island of Gods.</p>
+                            
+            </div>
+          </div>
+          <div class="col-md-12 marker2">        <!-- apply-style-two -->
+            <div class="marker" class="text-center" style="text-align: center !important; background-color: #040e26; border-radius: 100%; margin-left: 30% !important; margin-right: 30%; width: 130px;
+  height: 130px;  border-radius: 100%;
+  overflow: hidden;">
+                <br>
+               <a href="" style="text-align: center !important;"><i class="fa fa-upload iconix" style="text-align: center !important; font-size: 30px;"></i></a>
+
+                <p style="text-align: center; color: #fff;">Day One</p>
+            </div>  
+            <p style="text-align: center;">1. Upload Documents</p>  
+          </div>
+          <div class="col-md-12">   
+            <div class="vl"></div>
+            <br>
+               
+          </div>
+          <div class="col-md-12 marker2">        <!-- apply-style-two -->
+            <div class="marker" class="text-center" style="text-align: center !important; background-color: #040e26; border-radius: 100%; margin-left: 30% !important; margin-right: 30%; width: 130px;
+  height: 130px;  border-radius: 100%;
+  overflow: hidden;">
+                <br>
+               <a href="" style="text-align: center !important;"><i class="fa fa-money iconix" style="text-align: center !important; padding-top: 15px;"></i></a>
+                <p style="text-align: center;"></p>
+            </div>  
+            <p style="text-align: center;">2. Complete Payment</p>  
+          </div>
+          <div class="col-md-12">   
+            <div class="vl"></div>
+            <br>
+               
+          </div>
+          
+          <div class="col-md-12 marker2">        <!-- apply-style-two -->
+            <div class="marker" class="text-center" style="text-align: center !important; background-color: #040e26; border-radius: 100%; margin-left: 30% !important; margin-right: 30%; width: 130px;
+  height: 130px;  border-radius: 100%;
+  overflow: hidden;">
+                <br>
+               <a href="" style="text-align: center !important;"><i class="fa fa-search iconix" style="text-align: center !important; padding-top: 15px;"></i></a>
+                <p style="text-align: center;"></p>
+            </div>  
+            <p style="text-align: center;">3. Track Status</p>  
+          </div>
+          <div class="col-md-12">   
+            <div class="vl"></div>
+            <br>
+               
+          </div>
+          <div class="col-md-12 marker2">        <!-- apply-style-two -->
+            <div class="marker" class="text-center" style="text-align: center !important; background-color: #040e26; border-radius: 100%; margin-left: 30% !important; margin-right: 30%; width: 130px;
+  height: 130px;  border-radius: 100%;
+  overflow: hidden;">
+                <br>
+               <a href="" style="text-align: center !important;"><i class="fa fa-file iconix" style="text-align: center !important;"></i></a>
+                <p style="text-align: center; color: #fff;">Day Five</p>
+            </div>  
+            <p style="text-align: center;">4. Get E-Visa</p>  
+          </div>
+          <br>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" style="background-color: #000000; padding-top: 2em !important; padding-bottom: 0em !important;" id="services">
+      <div class="container">
+        <div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <span class="subheading">Our Services</span>
+            <h2 class="mb-4" style="color: #fff;">All The Immigrations Services You Need</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center my-3" style="margin-top: -30px !important;">
+    <div class="row mx-auto my-auto">
+        <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item py-5 active">
+                    <div class="row">        
+
+                      <div class="col-md-12 ftco-animate">
+                        <div class="project-wrap">
+                           <a href="/services/business-visa-offshore" class="img" style="background-image: url(/static/assets/images/pma.jpeg); border-radius: 15px !important;"> 
+                            <span class="price">Starting From 3M idr + 50 usd (249 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/business-visa-offshore">
+                              <span class="days">Business Visa Offshore</span>
+                              <h3 style="font-size: 14px;">Entry Permit Up To 180 Days</h3>
+                          </a>                              
+                          </div>
+                        </div> 
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                       <div class="project-wrap">
+                         <a href="/services/social-visa-onshore" class="img" style="background-image: url(/static/assets/images/social.jpeg); border-radius: 15px !important;"> 
+                          <span class="price">Starting From 2,8M IDR + 50 usd (245 $)</span>                 
+                        </a>
+                        <div class="text p-4" style="border-radius: 15px !important;">
+                          <a href="/services/social-visa-onshore">
+                            <span class="days">Social Visa Onshore</span>
+                            <h3 style="font-size: 14px;">Stay Permit Up To 150 Days</h3>
+                        </a>
+                            
+                       </div>
+                      </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                        <div class="project-wrap">
+                           <a href="/services/cozero-living" class="img" style="background-image: url(/static/assets/images/coliving.jpeg); border-radius: 15px !important;"> 
+                            <span class="price price-cozero">Package</span>                
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/cozero-living">
+                              <span class="days" style="color: #8CC63F !important;">COZero Living</span>
+                              <h3 style="font-size: 14px;">Visa + Accommodation Package</h3>
+                              </a>
+                         </div>
+                        </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                           <a href="/services/working-kitas" class="img" style="background-image: url(/static/assets/images/working.jpeg); border-radius: 15px !important;">  
+                            <span class="price">Starting From 10,5M idr + 1,350 usd (2,095 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/working-kitas">
+                              <span class="days">Working Kitas</span>
+                              <h3 style="font-size: 14px;">Working Permit As Employee</h3>
+                            </a>
+                              
+                         </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                           <a href="/services/freelance-kitas" class="img" style="background-image: url(/static/assets/images/hero-bg.jpeg); border-radius: 15px !important;">  
+                            <span class="price">Starting From 11M idr + 750 usd (1.535 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/freelance-kitas">
+                              <span class="days">Freelance Kitas</span>
+                              <h3 style="font-size: 14px;">Working Permit As No Employee</h3>
+                          </a>
+                              
+                         </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                          <a href="/services/spouse-kitas" class="img" style="background-image: url(/static/assets/images/spouse.jpeg); border-radius: 15px !important;">  
+                            <span class="price">Starting From 8,5 M + 150 usd (745 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/spouse-kitas">
+                              <span class="days">Spouse Kitas</span>
+                              <h3 style="font-size: 14px;">Marriage Visa</h3>
+                            </a>
+                              
+                         </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                           <a href="/services/retirment-kitas" class="img" style="background-image: url(/static/assets/images/retirment.jpeg); border-radius: 15px !important;">  
+                            <span class="price">Starting From 10M idr +150 usd (850 $)</span>                
+                          </a>
+                          
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/retirment-kitas">
+                              <span class="days">Retirement Kitas</span>
+                              <h3 style="font-size: 14px;">Over 55 Years Old Visa</h3>
+                              </a>
+                          </div>                 
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                            <a href="/services/investor-kitas" class="img" style="background-image: url(/static/assets/images/wok2.jpeg); border-radius: 15px !important;">  
+                            <span class="price">Starting From 12M idr +150 usd (990 $)</span>                
+                          </a>
+                          <div class="text p-4"  style="border-radius: 15px !important;">
+                          <a href="/services/investor-kitas">
+                              <span class="days">Investor Kitas</span>
+                              <h3 style="font-size: 14px;">Foreign Shareholder Visa</h3>
+                            </a>
+                          </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                            <a href="/services/set-up-pt-pma" class="img" style="background-image: url(/static/assets/images/investment.jpeg); border-radius: 15px !important;"> 
+                            <span class="price">Starting From 25M idr (1.745 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/set-up-pt-pma">
+                              <span class="days">Set Up PT PMA</span>
+                              <h3 style="font-size: 14px;">Business Company</h3>
+                              </a>
+                         </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+                 <div class="carousel-item py-5">
+                    <div class="row">               
+                      <div class="col-md-12 ftco-animate">
+                       
+                         <div class="project-wrap">
+                           <a href="/services/set-up-pt-pma" class="img" style="background-image: url(/static/assets/images/multi.jpeg); border-radius: 15px !important;"> 
+                            <span class="price">Starting From 3M idr + 50 usd (249 $)</span>                 
+                          </a>
+                          <div class="text p-4" style="border-radius: 15px !important;">
+                            <a href="/services/set-up-pt-pma">
+                              <span class="days">Business Visa Multi Entry</span>
+                              <h3 style="font-size: 14px;">Visit Permit To Enter Multiple Times</h3>
+                              </a>
+                         </div>
+                         </div>
+
+                      </div>                        
+                    </div>
+                </div>
+             
+
+
+            </div>
+              <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+                <span class="fa fa-chevron-left"  style="color: #ff0000;" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+                  <span class="fa fa-chevron-right" style="color: #ff0000;"  aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+    </section>
+
+    
+    
+
+    <section class="ftco-section ftco-about img" style="background-image: url(/static/assets/images/team1.JPG); margin-top: -2em !important; height: 300px;">
+      <div class="overlay"></div>
+      <div class="container py-md-5">
+        <div class="row py-md-5">
+          <div class="col-md d-flex align-items-center justify-content-center" id="about">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-about ftco-no-pt img">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-12 about-intro">
+            <div class="row">
+              
+              <div class="col-md-12 pl-md-5 py-5">
+                <div class="row justify-content-start pb-3">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <span class="subheading">About Us</span>
+                    <h2 class="mb-4">Make Your Bali Experience Memorable and Safe</h2>
+                
+                    
+                    <p>Bali Zero was born in 2020 as an international brand from the mother company Bayu Santero (founded locally in 2003) in pandemic time. That's why Zero: with the pandemic Bali had to recreate itself from the scratch. </p>
+                    <p>Bali Zero has legally supported the creation of new businesses, helping the expat community with visas process, residence and work permits. Bali Zero is son of the pandemic, which unintentionally created an extraordinary community of beautiful people. Now we are facing new challenges but always supporting the new generations of expats on the island of Gods.</p>
+                  
+                    <p>Our goal is to provide the best services in terms of professionality and efficiency creating a cool network of people to develop social, cultural and psychological growth serving people’s well-being, locally and globally. Chose your service, join our community.</p>
+                    <br>
+                    <p><a href="/#services" class="btn btn-primary">Our Services</a></p>
+                  </div>
+                </div>
+              </div>      
+              <div class="row" style="margin-left: 10px;  margin-right: 10px;">   
+                
+                 <div class="col-md-6" style="width: 50%">
+                <img src="/static/assets/images/team/Slide5.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+                <h2 class="text-center team">Zainal Abidin</h2>
+                <p class="text-center">CEO</p>
+              </div>    
+              <div class="col-md-6" style="width: 50%">
+                <img src="/static/assets/images/team/Slide2.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+                <h2 class="text-center team">Antonello</h2>
+                <p class="text-center">The Bridge</p>
+              </div>  
+             
+              <div class="col-md-6" style="width: 50%">
+                <img src="/static/assets/images/team/Slide3.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+                <h2 class="text-center team">Yanti</h2>
+                <p class="text-center">Company Consultant</p>
+              </div>  
+              <div class="col-md-6" style="width: 50%">
+                <img src="/static/assets/images/team/Slide4.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+                <h2 class="text-center team">Adit</h2>
+                <p class="text-center">Visa Consultant</p>
+              </div>    
+              
+              <div class="col-md-6" style="width: 50%">
+                <img src="/static/assets/images/team/Slide6.PNG" class="w-100" style="border:solid 1px; border-color: #fff; border-radius: 20px;">
+                <h2 class="text-center team">Bayu</h2>
+                <p class="text-center">Visa Consultant</p>
+              </div>    
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="ftco-section testimony-section bg-bottom" id="testimonial">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center pb-4">
+          <div class="col-md-12 text-center heading-section heading-section-white ftco-animate">
+            <span class="subheading">Testimonial</span>
+            <h2 class="mb-4">Bali Zero Community Feedback</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+              <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+              <div class="elfsight-app-caae2911-657f-40b9-acde-d1db5639e40e"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ftco-section" id="blog" style="padding-top: 2em !important; padding-bottom: 0em !important;">
+      
+      <div class="container text-center my-3">
+          <div class="row mx-auto my-auto">
+              <div id="BlogCarousel" class="carousel slide w-100" data-interval="false">
+                  <div class="heading-section text-left ftco-animate">
+                    <span class="subheading">Stay Update</span>
+                     <h2 class="">Our Blog & Instagram</h2>   
+                     </div>
+                     {% from "includes/_formhelpers.html" import render_field %}
+                     <form method="POST" enctype="multipart/form-data" id="form" action="{{ url_for('SearchBlog') }}" >
+                     {{ form.hidden_tag() }}          
+                
+                      <div class="form-group">
+                      {{ render_field(form.keyword, class="form-control",autocomplete="off",placeholder="Search by keyword, ex : visa, offshore ",style="height : 35px !important; width : 400px;")}}
+                      </div>  
+                               
+                  <div class="carousel-inner" role="listbox">
+                      {% for blog in all_blog %}    
+                      {% if loop.index == 1  %}    
+                      <div class="carousel-item py-5 active">
+                      {% else %}    
+                      <div class="carousel-item py-5"> 
+                      {% endif %}     
+                          <div class="row">                     
+                              <div class="col-md-8 ftco-animate" style="text-align: left !important;">                                
+                                <h3 style="text-align: left;">{{blog.title}} </h3> 
+                                 {% if blog.showdate != None %}                                  
+                                 <p>{{blog.showdate.strftime("%d %B %Y")}}</p>
+                                 {% endif %}  
+                                
+                                <p style="text-align: left !important;">{{blog.content | safe}} </p>    
+                              </div>   
+                    
+                              <div class="col-md-4">
+                                {{blog.instagram | safe}} 
+                                    
+                              </div>
+                                                                      
+                          </div>
+                      </div>      
+                       {% endfor %}     
+                      
+                  </div>
+                    <a class="carousel-control-prev text-dark" href="#BlogCarousel" role="button" data-slide="prev">
+                      <span class="fa fa-chevron-left"  style="color: #ff0000;" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next text-dark" href="#BlogCarousel" role="button" data-slide="next">
+                        <span class="fa fa-chevron-right" style="color: #ff0000;"  aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+              </div>
+          </div>
+      </div>
+    </section>
+    <h3 id="kontak"></h3>
+    <section class="ftco-footer bg-bottom ftco-no-pt grey" style="background-image: url(/static/assets/images/balilut.JPG);" style="padding-top: 1em !important; padding-bottom: 0em !important;">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-6 heading-section p-5">
+            <span class="subheading">Contact Us</span>
+        <h2 class="" style="color: #fff;">Get in Touch With Us</h2>
+        <br>
+        <p style="color: #fff;">Whatsapp : +62816117171</p>
+        <p style="color: #fff;">Email : info@balizero.com</p>
+        <p style="color: #fff;">Address : <a href="https://www.google.com/maps/place/Bali+Zero/@-8.6481094,115.1614688,15z/data=!4m5!3m4!1s0x0:0xb3ec70896b8f8fbb!8m2!3d-8.6481094!4d115.1614688" style="color: #fff !important;" target="__blank"> Jl. Raya Semer, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali, 80361</a></p>
+            
+          </div>  
+          <div class="col-lg-6">
+            <br>
+            <form action="#" class="p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">            
+            <select class="form-control" id="cars" name="cars">
+        <option value="volvo">Need Help</option>
+        <option value="saab">Appointment</option>
+        <option value="fiat">Payment Confirmation</option>
+        <option value="audi">Consultation</option>
+      </select>
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+            
+          </div>
+          
+       </div>
+     </div>
+    </section>
+  
+
+    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #000;color: #fff; margin-top: -5px !important;" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+            </div>
+          </div>    
+          <div class="col-md-4">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+              <h2 class="ftco-heading-2" style="color: #fff;">About</h2>
+              <p style="color: #fff;">Our goal is to provide the best services in terms of professionality and efficiency creating a cool network of people to develop social, cultural and psychological growth serving people’s well-being, locally and globally. Chose your service, join our community.</p>
+              
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+              <h2 class="ftco-heading-2" style="color: #fff;">Zero Problem Tools</h2>
+              <ul class="list-unstyled">
+                <li><a href="/" class="py-2 d-block" style="color: #fff;">Online Payment</a></li>
+                <li><a href="/refund-policy" class="py-2 d-block" style="color: #fff;">Refund Policy</a></li>
+                <li><a href="#!" onclick="show()" id="btnID" class="py-2 d-block" style="color: #fff;">Whatsapp Direct Question</a></li>
+                <li><a href="/services/cozero-living" class="py-2 d-block" style="color: #fff;">COZero Living</a></li>
+                <li><a href="/" class="py-2 d-block" style="color: #fff;">Search in the website</a></li>
+                <li><a href="/#contact" class="py-2 d-block" style="color: #fff;">Contact Us</a></li>
+                
+          
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+              <h2 class="ftco-heading-2" style="color: #fff;">Follow Us</h2>
+              
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+          
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+            </div>
+          </div>  
+          
+                
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+          </div>
+        </div>
+      </footer>         
+      
+
+
+
+      <script src="{{url_for ('static',filename='assets/js/jquery.min.js')}}" type="text/javascript"></script> 
+    
+    
+      <script src="{{url_for ('static',filename='assets/js/jquery-migrate-3.0.1.min.js')}}" type="text/javascript"></script> 
+
+      <script src="{{url_for ('static',filename='assets/js/popper.min.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/bootstrap.min.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/jquery.easing.1.3.js')}}" type="text/javascript"></script> 
+
+      <script src="{{url_for ('static',filename='assets/js/jquery.waypoints.min.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/jquery.stellar.min.js')}}" type="text/javascript"></script> 
+
+  
+      <script src="{{url_for ('static',filename='assets/js/owl.carousel.min.js')}}" type="text/javascript"></script> 
+
+    
+      <script src="{{url_for ('static',filename='assets/js/jquery.magnific-popup.min.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/jquery.animateNumber.min.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/bootstrap-datepicker.js')}}" type="text/javascript"></script> 
+
+      
+      <script src="{{url_for ('static',filename='assets/js/scrollax.min.js')}}" type="text/javascript"></script> 
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+      
+      
+      <script src="{{url_for ('static',filename='assets/js/main.js')}}" type="text/javascript"></script> 
+      
+      <script type="text/javascript">
+
+
+   $(document).ready(function() {
+  $('#tallModal').modal('show');
+});
+ </script>     
+
+<script type="text/javascript">
+  $('#myCarousel').carousel({
+  interval: 10000
+})
+
+</script>
+
+<script>
+        function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('float')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script>
+
+<script type="text/javascript">
+  $(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+// make it as accordion for smaller screens
+if ($(window).width() < 992) {
+  $('.dropdown-menu a').click(function(e){
+    e.preventDefault();
+      if($(this).next('.submenu').length){
+        $(this).next('.submenu').toggle();
+      }
+      $('.dropdown').on('hide.bs.dropdown', function () {
+     $(this).find('.submenu').hide();
+  })
+  });
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+  $(function(){
+    $("#qmt-vehicle").on("change",function(){
+        var levelClass = $('#qmt-vehicle').find('option:selected').attr('class');
+        console.log(levelClass);
+        $('#qmt-manufacturer option').each(function () {
+            var self = $(this);
+            if (self.hasClass(levelClass) || typeof(levelClass) == "undefined") {
+                self.show();
+            } else {
+                self.hide();
+            }
+        });
+    });
+});
+</script>
+
+
+<!-- <script type="text/javascript">
+  $('#BlogCarousel').carousel({
+  interval: 5000
+})
+
+</script> 
+-->
+
+
+    </body>
+    </html>

@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Customer</title>
+{% endblock %}
+
+{% block content %}
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+
+       <div class="row">
+         <div class="col-md-12" style="margin-top:  70px; margin-bottom: 20px;">
+     
+          <h3 style="font-weight: bold; font-size: 22px;">Recent Order</h3>
+        </div>      
+        <div class="col-md-12" style="margin-bottom: 50px;">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th> 
+                <th scope="col">Type</th>    
+                <th scope="col">Services</th>            
+                <th scope="col">Visa Status</th>                
+                <th scope="col">Payment Status</th>       
+                <th scope="col">Last Update</th>                
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in all_booking %}
+              <tr>
+                <th scope="row">#{{x.url}}</th>
+                <td>{{x.fullname}}</td>
+                <td>{{x.email}}</td>  
+                <td>{{x.tipe}}</td>  
+                <td>{{x.services}}</td>    
+                <td>{{x.visastatus}}</td>            
+                
+                <td>{{x.status}}</td>
+                <td>{{x.lastupdate.strftime("%d %B %Y")}}</td>
+               
+                <td>
+                  <p class="dropdown-toggle" data-toggle="dropdown">menu</p>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/dashboard/booking/{{status}}/{{x.id}}">view data</a>
+                    
+                    </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>    
+        </div>           
+      </div>     
+
+    </div>
+</main>
+
+{% endblock %}
+    
+  

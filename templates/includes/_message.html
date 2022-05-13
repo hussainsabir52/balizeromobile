@@ -1,0 +1,18 @@
+<!-- menghandle flash message saat redirect -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alert-message">{{ message }}  <a class="close" data-dismiss="alert" href="#">&times;</a></div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<!-- menghandle flash message saat render template -->
+{% if error %}
+	<div class="alert alert-danger  alert-message">{{ error }}  <a class="close" data-dismiss="alert" href="#">&times;</a></div>
+{% endif %}
+
+{% if msg %}
+	<div class="alert alert-success  alert-message">{{ msg }}  <a class="close" data-dismiss="alert" href="#">&times;</a></div>
+{% endif %}

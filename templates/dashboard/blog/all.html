@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Leads</title>
+{% endblock %}
+
+{% block content %}
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+
+       <div class="row">
+         <div class="col-md-12" style="margin-top:  70px; margin-bottom: 20px;">
+     
+          
+          <a href="/dashboard/blog/create" class="btn btn-outline-dark float-right">Create New Blog</a>
+          <h3 style="font-weight: bold; font-size: 22px;">Blog List</h3>
+        </div>      
+        <div class="col-md-12" style="margin-bottom: 50px;">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>                
+                <th scope="col">Title</th>
+                <th scope="col">Created Date</th> 
+                <th scope="col">Published Date</th>  
+                <th scope="col"></th>    
+               
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in all_blog %}
+
+              <tr>
+                <th>{{x.title}}</th>
+                <td>{{x.created_date.strftime("%d %B %Y")}}</td>
+                {% if x.showdate == None %}
+                <td>-</td>
+                {% else %}
+                 <td>{{x.showdate.strftime("%d %B %Y")}}</td>
+                 {% endif %}
+                 <td>
+                  <p class="dropdown-toggle" data-toggle="dropdown">menu</p>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/dashboard/blog/{{x.id}}/view">view blog</a>  
+                       <a class="dropdown-item" href="/dashboard/blog/{{x.id}}/edit">edit blog</a>  
+                        <a class="dropdown-item" href="/dashboard/blog/{{x.id}}/delete">delete blog</a>                    
+                    </div>
+                </td>
+              
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>    
+        </div>           
+      </div>     
+
+    </div>
+</main>
+
+{% endblock %}
+    
+  

@@ -1,0 +1,326 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Customer</title>
+{% endblock %}
+
+{% block content %}
+<link href="{{url_for ('static',filename='skillflare/css/profile.css')}}" rel="stylesheet"/>
+
+
+<div id="tallModal" class="modal modal-wide fade" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Status</h5>
+       
+      </div>
+      <div class="modal-body">
+        {% from "includes/_formhelpers.html" import render_field %}
+            <form method="POST" enctype="multipart/form-data" id="form">
+               {{ form.hidden_tag() }}
+               <div class="row">    
+                   <div class="col-md-12">
+                        <div class="form-group">
+                    {{ render_field(form.visastatus, class="form-control",autocomplete="off",placeholder="")}}
+                        </div>
+                    </div>     
+                  
+                                       
+                </div>
+    
+      </div>
+
+      <div class="modal-footer">
+         <a href="/dashboard/invoice/{{status}}/{{booking.id}}" class="btn btn-outline-dark">Cancel</a>        
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main class="d-flex align-items-center">
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-12 float-right" style="margin-bottom: 30px;">
+                        
+                        <a href="" class="btn btn-outline-dark float-right dropdown-toggle" data-toggle="dropdown">Menu </a>
+                        <div class="dropdown-menu">
+                           <a class="dropdown-item" href="/dashboard/invoice/{{status}}/booking/{{booking.id}}/payment">Edit Payment Status</a>
+                           <a class="dropdown-item" href="/dashboard/invoicedelete">Edit Visa Status</a>
+                        </div>                            
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="/static/document/{{selfie.filename}}" alt=""/>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        {{booking.fullname}}  {{booking.surname}}
+                                    </h5>
+                                    
+                                    <h6>
+                                         payment status : {{booking.status}}
+                                    </h6>
+                                    
+                                     <h6>
+                                        visa status : {{booking.visastatus}}
+                                    </h6>
+                             <br>
+                             <br>      
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#order" role="tab" aria-controls="home" aria-selected="true">Order Detail</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Address</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#emergency" role="tab" aria-controls="profile" aria-selected="false">Emergency Info</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>Additional Info</p>
+                            <a href="">{{booking.services}}</a><br/>
+                            <a href="">Payment via {{booking.paymentmethod}}</a><br/>
+                           
+                            
+                            <p>Document</p>
+                             <a href="/dashboard/invoice/{{status}}/booking/{{booking.id}}/invoice" target="__blank">View Invoice</a><br/>
+                            <a href="/static/document/{{passport.filename}}" target="__blank">Passport Document</a><br/>
+                            <a href="/static/document/{{covid.filename}}" target="__blank">Vaccine Document</a><br/>
+                            <a href="/static/document/{{selfie.filename}}" target="__blank">Selfie Photo</a><br/>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="order" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Invoice ID</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>#{{booking.id}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Services</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.services}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Payment Status</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.status}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Visa Status</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.visastatus}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Payment Type</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.paymentmethod}}</p>
+                                            </div>
+                                        </div>
+                                       
+                            </div>
+                            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.fullname}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Surname</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.surname}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.phone}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Gender</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.gender}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Birth place</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.birthplace}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Birth Date</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.birthdate.strftime("%d %B %Y")}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Martial Status</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.martial}}</p>
+                                            </div>
+                                        </div>
+                                       
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Adress</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.original_address}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>City</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.original_city}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>State</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.original_state}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Zip</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.original_zip}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Country</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.original_country}}</p>
+                                            </div>
+                                        </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="emergency" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Emergency Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_name}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Adress</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_address}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>City</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_city}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>State</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_state}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Zip</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_zip}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Country</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{booking.emergency_country}}</p>
+                                            </div>
+                                        </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+</main>
+
+{% endblock %}
+    
+  

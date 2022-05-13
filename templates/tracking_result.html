@@ -1,0 +1,71 @@
+{% extends "layouts/index.html" %}
+
+{% block content %}
+
+<div id="tallModal" class="modal modal-wide fade" data-keyboard="false" data-backdrop="static">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+        <a href="/" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+        
+      </div>		
+	      
+	      <div class="modal-body">   
+	      
+	               <div class="row">    
+	                    <div class="col-md-12 text-center">
+	                      <p>Last update on {{booking.lastupdate.strftime("%d %B %Y")}}</p>
+	                      <br>	
+	                      {% if booking.visastatus == "waiting payment" %}	
+	                      <h6>Hi ! We are already working on your application process. Our team received your documents and is double checking that everything is ok. We are waiting for your payment to continue with the application process, check out your email to find the payment link. See you soon!</h6>
+	                      <br>
+	                      {% elif booking.visastatus == "document submited" %}	
+	                      <h6>Hi ! We are already working on your application process. Our team received your documents and some info/documents are missing or to be corrected. Please check out your mail, we are already working to reach you out in order to fix your application and go ahead super fast with your process. See you soon! "</h6>
+	                      <br>
+	                      {% elif booking.visastatus == "document error" %}	
+	                      <h6>"Hi ! We are already working on your application process. Our team received your documents and some info/documents are missing or to be corrected. Please check out your mail, we are already working to reach you out in order to fix your application and go ahead super fast with your process. See you soon! "</h6>
+	                      <br>
+	                      {% elif booking.visastatus == "documents at the Immigration" %}	
+	                      <h6>Hi ! We are already working on your application and you are at the phase 3/4 of the process. Payment has been correctly received and your documents were compliant with the application rules and they are now at the Immigration Office for the final validation. You’re so close and we can’t wait to send your E-Visa by email soon! Please check your status again in the next days and keep checking your mailbox daily. See you soon!"    </h6>
+	                      <br>
+	                      {% elif booking.visastatus == "visa approved" %}	
+	                      <h6>Hi! Congratulation your application is end and your E-Visa is finally ready. Check out your mailbox, we have already sent you the Electronic Visa and some instructions on how to use it end enter legally and safe in Indonesia. If you don’t find our email check in the spam or just send us a message and we will send it again. We can’t wait to have you here and invite you to our next Bali Zero Community event in the Island of Gods.<br> Stay tuned with us checking our mailing to be updated about the Visa regulation changes. Also follow us on IG!"</h6>
+	                      <br>
+	                      {% else %}
+	                      <h6>Hi ! We are working on your application and you are at the phase 3/4 of the process. Payment is correctly received. Your documents were compliant with the application rules and they are at the Immigration Office for the final validation. Due to some Indonesian Government’s delay we have to wait a little bit more than the normal. Sorry for this inconvenience, we are pushing your application daily. Check out the status again in the next days, we will be able to solve this very soon! </h6>
+	                      <br>	
+	                      {% endif %}
+
+ 							
+	                    
+	                     	<a href="/"><button class="btn btn-primary py-3 px-4 text-center">Back to Home</button></a><br>
+	                      <br>	
+	                      <br>
+	                      
+	                    </div>                    
+	                </div>
+	    
+	      </div>
+
+	      
+	    </div>
+	  </div>
+	</div>  
+	
+
+
+<script type="text/javascript">
+	var checker = document.getElementById('checkme');
+ var sendbtn = document.getElementById('sendNewSms');
+ // when unchecked or checked, run the function
+ checker.onchange = function(){
+if(this.checked){
+    sendbtn.disabled = false;
+} else {
+    sendbtn.disabled = true;
+}
+
+}
+</script>
+
+{% endblock %} 

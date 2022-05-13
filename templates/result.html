@@ -1,0 +1,204 @@
+{% extends "layouts/index.html" %}
+
+{% block content %}
+
+<div id="tallModal" class="modal modal-wide fade" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+	        	<a href="/" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>        
+	      	  </div>		
+	      
+	      	<div class="modal-body">   	      
+	               <div class="row">    
+	                    <div class="col-md-12 text-center">	
+	                      <br>	
+	                      {% if time == "60" and purpose == "Tourism" %}	                      
+	                      
+	                      <p>Since March 2022 coming for tourism porpose is now possible and you can directly get your 30 days Visa On Arrival at the airport. For additional 30 days you can get in touch with us.</p>
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                    
+	                      <a href="/"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">TRAVEL SAFE AND STAY UPDATED WITH US FOR EVERY REGULATION CHANGE !</button></a><br>
+
+	                      {% elif time == "60" and purpose == "Business" %}	                      
+	                      
+	                      <p>You can apply with us. We will be your sponsor to apply for a b211 or b212 entry visa.</p>
+	                      <ul>
+	                      <li>- Apply for a multi entry if you plan to enter and exit form the country multiple times for short periods.</li>
+	                      <li>- Apply for a single entry if you plan to enter and stay in the country for longer continuative period.</li>
+	                  	  </ul>
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/multi-entry"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">APPLY FOR MULTI ENTRY VISA</button></a><br><br>
+
+
+	                      <a href="/services/business-visa-offshore"><button class="btn btn-primary py-3 px-4 text-center" name="sendNew" disabled="disabled" id="sendNew">APPLY FOR SINGLE ENTRY VISA</button></a><br>
+
+	                      {% elif time == "61" and purpose == "Staycation" %}	                      
+	                      
+	                      <p>You can apply with us and stay in indonesia up to 180 days. We will be your sponsor to apply for a b211a single entry visa. </p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/business-visa-offshore"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">APPLY FOR SINGLE ENTRY VISA</button></a><br><br>
+
+
+
+	                      {% elif time == "61" and purpose == "Work" %}	                      
+	                      
+	                      <p>To work and generate income in indonesia you must have a working permit and be hired by an indonesian company (working visa) or work indipenently as a freelance (freelance visa).</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/working-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">I WANT TO KNOW MORE ABOUT WORKING VISA</button></a><br><br>
+
+
+	                      <a href="/services/freelance-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNew" disabled="disabled" id="sendNew">I WANT TO KNOW MORE ABOUT FREELANCE VISA</button></a><br>
+
+	                      {% elif time == "61" and purpose == "Investment" %}	                      
+	                      
+	                      <p>If you want to start your business in indonesia you can open your own foreign company (PT PMA) and apply for an investor visa. </p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/investor-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">I WANT TO KNOW MORE ABOUT INVESTMENT VISA</button></a><br><br>
+	                           
+	                      {% elif time == "61" and purpose == "Remotely" %}	                      
+	                      
+	                      <p>If you are looking for a permit to come, work remotely and join a community of travel workers like you  we will be your sponsor and your host</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/business-visa-offshore"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">APPLY FOR SINGLE ENTRY VISA AND TAKE A LOOK AT OUR VISA + COZERO LIVING PACKAGE </button></a><br><br>
+
+
+
+	                      {% elif time == "180" and purpose == "Retired" %}	                      
+	                      
+	                      <p>If you have more than 55 years old  you can apply  for  a long term stay permit.</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/retirment-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">ASK FOR A RETIREMENT VISA</button></a><br><br>
+
+	                      {% elif time == "180" and purpose == "Married" %}	                      
+	                      
+	                      <p>If you merried an indonesian citizen you can apply  for a long term stay permit.</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/spouse-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">ASK FOR A MARRIGE VISA</button></a><br><br>
+
+	                      {% elif time == "180" and purpose == "Work" %}	                      
+	                      
+	                      <p>To work and generate income in indonesia you must have a working permit and be hired by an indonesian company (working visa) or work indipenently as a freelance (freelance visa).</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/working-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">I WANT TO KNOW MORE ABOUT WORKING VISA</button></a><br><br>
+
+
+	                      <a href="/services/freelance-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNew" disabled="disabled" id="sendNew">I WANT TO KNOW MORE ABOUT FREELANCE VISA</button></a><br>
+
+	                      {% elif time == "180" and purpose == "Investment" %}	                      
+	                      
+	                      <p>If you want to start your business in indonesia you can open your own foreign company (PT PMA) and apply for an investor visa. </p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/investor-kitas"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">I WANT TO KNOW MORE ABOUT INVESTMENT VISA</button></a><br><br>
+
+	                      {% elif time == "180" and purpose == "Staycation" %}	                      
+	                      
+	                      <p>You can apply with us and stay in Indonesia and renew your single visa entry every  6 months. We will be your sponsor to apply for a b211a entry visa.</p>
+	                      
+	                      <br>
+
+	                      <input type="checkbox" id="checkme"/>
+	                      <label for="checkme" style="font-size: 13px !important;">By using our website, you agree to receive our welcome e-mail</label><br><br>
+  							
+	                       	 
+	                      <a href="/services/business-visa-offshore"><button class="btn btn-primary py-3 px-4 text-center" name="sendNewSms" disabled="disabled" id="sendNewSms">APPLY FOR SINGLE ENTRY VISA</button></a><br><br>
+
+
+
+
+
+	                      {% endif %}	      	      
+	                        	      
+
+	                      <br>	
+	                      <br>
+
+	                      
+	                    </div>                    
+	                </div>
+	    
+	      </div>
+
+	      
+	    </div>
+	  </div>
+	</div>  
+	
+
+
+<script type="text/javascript">
+	var checker = document.getElementById('checkme');
+ var sendbtn = document.getElementById('sendNewSms');
+ var send = document.getElementById('sendNew');
+ // when unchecked or checked, run the function
+ checker.onchange = function(){
+if(this.checked){
+    sendbtn.disabled = false;
+    send.disabled = false;
+} else {
+    sendbtn.disabled = true;
+    send.disabled = true;
+}
+
+}
+
+</script>
+
+{% endblock %} 

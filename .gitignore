@@ -1,0 +1,9 @@
+wsgi.py
+*.sock
+*.log
+config.py
+*.pyc
+/env
+config.pyc
+/migrations
+/static/document

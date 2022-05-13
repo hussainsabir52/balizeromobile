@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Customer</title>
+{% endblock %}
+
+{% block content %}
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+
+       <div class="row">
+         <div class="col-md-12" style="margin-top:  70px; margin-bottom: 20px;">
+     
+          <h3 style="font-weight: bold; font-size: 22px;">Appointment List</h3>
+        </div>      
+        <div class="col-md-12" style="margin-bottom: 50px;">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>                
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>    
+                <th scope="col">Whatsapp</th>           
+                <th scope="col">Services</th>            
+                <th scope="col">Meeting Prefences</th>                
+                <th scope="col">Time</th> 
+                <th scope="col">Country</th>  
+                <th scope="col">Status</th>                
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for x in all_appointment %}
+
+              <tr>
+                <th>{{x.name}}</th>
+                <td>{{x.email}}</td>
+                <td>{{x.phone}}</td>
+                <td>{{x.services}}</td>
+                <td>{{x.meeting}}</td>    
+                {% if x.meeting == "No Meeting" %}
+                <td>-</td>
+                <td>-</td>
+                {% else %}
+                <td>{{x.time}} - {{x.date.strftime("%d %B %Y")}}</td>  
+                <td>{{x.countrytime}}</td>   
+                {% endif %}       
+                
+                <td>{{x.status}}</td>               
+                <td>
+                  <p class="dropdown-toggle" data-toggle="dropdown">menu</p>
+                    <div class="dropdown-menu">
+                    	{% if x.status == "pending" %}
+                      <a class="dropdown-item" href="/dashboard/appointment/{{x.id}}/{{x.url}}/done">mark as done</a>
+                    	{% else %}
+                    	 <a class="dropdown-item" href="/dashboard/appointment/{{x.id}}/{{x.url}}/pending">mark as pending</a>
+                    	{% endif %}
+                    </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>    
+        </div>           
+      </div>     
+
+    </div>
+</main>
+
+{% endblock %}
+    
+  

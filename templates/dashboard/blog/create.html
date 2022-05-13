@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Leads</title>
+{% endblock %}
+
+{% block content %}
+<main class="d-flex align-items-center">
+    <div class="container">
+       
+
+       <div class="row">
+         <div class="col-md-12" style="margin-top:  70px; margin-bottom: 20px;">
+     
+          <h3 style="font-weight: bold; font-size: 22px;">Create Blog Post</h3>
+        </div>      
+        <div class="col-md-12" style="margin-bottom: 50px;">
+
+          {% include "includes/_message.html" %}              
+          {% from "includes/_formhelpers.html" import render_field %}
+          <form class="login-form" method="POST" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}              
+            <div class="form-group">
+              {{ render_field(form.title, class="form-control")}}             
+            </div>
+            <div class="form-group">
+              {{ render_field(form.showdate, class="form-control dtpick")}}             
+            </div>
+            <div class="form-group">
+              {{ render_field(form.instagram, class="form-control")}}             
+            </div>
+            <div class="form-group">
+              {{ render_field(form.content, class="form-control")}}             
+            </div>           
+           
+            <br>
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+          </form>
+          <br>          
+          
+        </div>  
+
+                 
+                
+      </div>     
+
+    </div>
+</main>
+
+<!-- main content area end -->
+     <script src="//cdn.ckeditor.com/4.7.1/basic/ckeditor.js"></script>
+    <script type="text/javascript">
+    CKEDITOR.replace("content")
+    </script>
+
+{% endblock %}
+    
+  

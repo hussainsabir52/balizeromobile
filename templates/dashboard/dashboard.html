@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+<title>Internal - My Dashboard</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="d-flex align-items-center">
+    <div class="container">
+       <div class="row">
+        <div class="col-md-12" style="margin-top: 50px; margin-bottom: 20px;">
+          
+          <h3 style="font-weight: bold; font-size: 22px;">Hi {{current_user.username}}</h3>
+          <p>Here is summary from your website</p>
+        </div>  
+
+       
+        <div class="col-sm-4" style="margin-bottom: 15px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Leads</h5>
+              <p>{{all_leads | length }} Total Leads</p>
+              <a href="/dashboard/leads" class="btn btn-outline-dark">Details</a>  
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-bottom: 15px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Order</h5>
+              <p>{{all_booking | length }} Total Order</p>
+              <a href="/dashboard/booking/all" class="btn btn-outline-dark">Details</a>  
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-bottom: 15px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Appointment</h5>
+              <p>{{all_appointment | length }} Total Appointment</p>
+              <a href="/dashboard/appointment" class="btn btn-outline-dark">Details</a>  
+            </div>
+          </div>
+        </div>
+                
+      </div>
+      <br>
+      <br>
+
+    </div>
+
+  </main>
+
+{% endblock %}
