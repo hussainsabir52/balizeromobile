@@ -421,10 +421,10 @@ def Tracking():
                 time = request.form["vehicle"]
                 purpose = request.form["manufacturer"]
 
-                if purpose == "Tourism":                                                     
-                    lead = Leads(name=request.form["name"],email=request.form["email"],services=purpose)
-                    db.session.add(lead)
-                    db.session.commit()        
+                                                                  
+                lead = Leads(name=request.form["name"],email=request.form["email"],services=purpose)
+                db.session.add(lead)
+                db.session.commit()        
                 return redirect(url_for("Result",time=time,purpose=purpose))                       
             else:
                  return redirect(url_for("EnterEmail"))            
