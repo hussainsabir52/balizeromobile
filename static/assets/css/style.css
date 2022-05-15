@@ -8604,20 +8604,20 @@ h1, h2, h3, h4, h5,
 .slider-text {
   position: relative; }
   .slider-text .subheading {
-    font-size: 30px;
+    font-size: 25px;
     color: #e3242b;
     font-family: "Arizonia", cursive; }
   .slider-text h1 {
-    font-size: 35px;
+    font-size: 25px;
     color: #fff;
     line-height: 1.2;
     font-weight: 700; }
     @media (max-width: 991.98px) {
       .slider-text h1 {
-        font-size: 40px; } }
+        font-size: 25px; } }
     @media (max-width: 767.98px) {
       .slider-text h1 {
-        font-size: 30px; } }
+        font-size: 24px; } }
   .slider-text p {
     font-size: 20px;
     line-height: 1.5;
@@ -8673,7 +8673,7 @@ h1, h2, h3, h4, h5,
   position: relative;
   width: 100%;
   display: block;
-  margin-top: -210px !important; }
+  margin-top: 20px !important; }
   .ftco-search .nav-pills {
     display: inline-block; }
     .ftco-search .nav-pills p {
@@ -9129,11 +9129,11 @@ h1, h2, h3, h4, h5,
 
 
 .carousel-control-prev {
-  margin-left: -10px;
+  margin-left: -20px;
 }
 
 .carousel-control-next {
-  margin-right: -10px;
+  margin-right: -20px;
 }    
 
 
@@ -10240,3 +10240,4 @@ textarea.form-control {
     display: block;
   }
 }    
+
