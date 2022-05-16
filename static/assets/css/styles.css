@@ -72,7 +72,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #fff !important;
   -webkit-overflow-scrolling: touch; }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -8678,7 +8678,7 @@ h1, h2, h3, h4, h5,
   position: relative;
   width: 100%;
   display: block;
-  margin-top: -130px !important; }
+  margin-top: -215px !important; }
   .ftco-search .nav-pills {
     display: inline-block; }
     .ftco-search .nav-pills p {
@@ -9313,8 +9313,9 @@ textarea.form-control {
 .ftco-no-pt {
   padding-top: 0 !important; }
 
+/*
 .ftco-no-pb {
-  padding-bottom: 0 !important; }
+  padding-bottom: 0 !important; }*/
 
 .ftco-bg-dark {
   background: #3c312e; }
