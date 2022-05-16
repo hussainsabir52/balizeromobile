@@ -8506,7 +8506,7 @@ h1, h2, h3, h4, h5,
       color: #e3242b;
       outline: none !important; }
   .ftco-navbar-light.scrolled {
-    position: fixed;
+    display: none;
     right: 0;
     left: 0;
     top: 0;
@@ -8559,7 +8559,7 @@ h1, h2, h3, h4, h5,
       .ftco-navbar-light.scrolled .nav-link.active {
         color: #e3242b !important; }
     .ftco-navbar-light.scrolled.awake {
-      margin-top: 0px;
+      
       -webkit-transition: .3s all ease-out;
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
