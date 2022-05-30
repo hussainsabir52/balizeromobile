@@ -1,7 +1,0 @@
-
-class StepOneBusinessForm(FlaskForm):
-	services = SelectField("Services",choices=[("E-Visa Super Express Process Service","E-Visa Super Express Process Service - 4M IDR + 50 USD (329 $)"),
-		("E-Visa Express Process Service","E-Visa Express Process Service - 3M IDR + 50 USD (249 $)"),
-		("E-Visa Regular Process Service","E-Visa Regular Process Service - 3,2M IDR (221 $)"),
-		("E-Visa Super Express + Accomodation in COZero Living","E-Visa Super Express + Accomodation in COZero Living - USD 700")])
-	payment = SelectField("Payment",choices=[("Credit Card","Credit Card"),("Paypal","Paypal"),("Transferwise","Transferwise")])

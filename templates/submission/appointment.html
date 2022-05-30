@@ -1,153 +1,169 @@
-{% extends "layouts/sub.html" %}
-
-{% block content %}
-
+{% extends "layouts/sub.html" %} {% block content %}
 
 <style type="text/css">
   .hideIfFixed {
-  display: block;
-}
+    display: block;
+  }
 </style>
 
-<div class="container card container-card" >
-
-
-    <div class="row text-center justify-content-center mb-5">
-        <div class="col-xl-12 col-lg-12">
-
-             {% include "includes/_message.html" %}   
-             {% if  services == "investor kitas" %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">GET AN INVESTOR VISA </h2>
-              <p>How to get it? What are the requirements and what is possible to do with an Investor Visa (KITAS)?</p>
-              {% elif  services == "freelance kitas" %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">WORKING PERMIT  </h2>
-              <p>Photographer/Filmmaker/Yoga Teacher…Do you have the dream to live and work in Bali? We have the solution for you.</p>
-               {% elif  services == "set up pt pma" %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">SET UP A COMPANY  </h2>
-              <p>Would you like to open a restaurant or do you know you have a winning idea? I will be very happy to know your story and your idea.</p>
-              {% elif  services == "retirment kitas" %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">RETIREMENT KITAS</h2>
-              <p>To obtain a retirement visa, the process is relatively simple and the requirements are fairly straightforward. The main requirement is age, whereby you must be t least 55 years old to apply.</p>
-                {% elif  services == "spouse kitas" %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">FAMILY KITAS  </h2>
-              <p>LOVE, LIVE, BALI. We are happy to help you to obtain the right Visa to spend time together with your family.</p>
-              {% else %}   
-              <h2 class="font-weight-bold" style="margin-top: 40px;">WORKING PERMIT  </h2>
-              <p>If your company needs to hire people either you are the man/woman they are looking for, we can set together the best solution to be 100% in compliant with Indonesian law.</p>
-             {% endif %}   
-        </div>
+<div class="container card container-card">
+  <div class="row text-center justify-content-center mb-5">
+    <div class="col-xl-12 col-lg-12">
+      {% include "includes/_message.html" %} {% if services == "investor kitas"
+      %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">
+        GET AN INVESTOR VISA
+      </h2>
+      <p>
+        How to get it? What are the requirements and what is possible to do with
+        an Investor Visa (KITAS)?
+      </p>
+      {% elif services == "freelance kitas" %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">WORKING PERMIT</h2>
+      <p>
+        Photographer/Filmmaker/Yoga Teacher…Do you have the dream to live and
+        work in Bali? We have the solution for you.
+      </p>
+      {% elif services == "set up pt pma" %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">
+        SET UP A COMPANY
+      </h2>
+      <p>
+        Would you like to open a restaurant or do you know you have a winning
+        idea? I will be very happy to know your story and your idea.
+      </p>
+      {% elif services == "retirment kitas" %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">
+        RETIREMENT KITAS
+      </h2>
+      <p>
+        To obtain a retirement visa, the process is relatively simple and the
+        requirements are fairly straightforward. The main requirement is age,
+        whereby you must be t least 55 years old to apply.
+      </p>
+      {% elif services == "spouse kitas" %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">FAMILY KITAS</h2>
+      <p>
+        LOVE, LIVE, BALI. We are happy to help you to obtain the right Visa to
+        spend time together with your family.
+      </p>
+      {% else %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">WORKING PERMIT</h2>
+      <p>
+        If your company needs to hire people either you are the man/woman they
+        are looking for, we can set together the best solution to be 100% in
+        compliant with Indonesian law.
+      </p>
+      {% endif %}
     </div>
+  </div>
 
-   
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="margin-top: 20px; margin-bottom: 50px">
+        <p style="font-weight: 600; text-align: justify">
+          Book in a free call/meeting and let’s collect together the documents
+          you need!
+        </p>
 
-      <div class="container">
-       <div class="row">
-        
-        <div class="col-md-12" style="margin-top: 20px; margin-bottom: 50px;">
-         
-          <p style="font-weight: 600;">Book in a free call/meeting and let’s collect together the documents you need !</p>
-         
-         {% from "includes/_formhelpers.html" import render_field %}
-            <form method="POST" enctype="multipart/form-data" id="form">
-               {{ form.hidden_tag() }}
-                       
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST" enctype="multipart/form-data" id="form">
+          {{ form.hidden_tag() }}
+
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.name, class="form-control",autocomplete="off",placeholder="")}}  
+                {{ render_field(form.name,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.email, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.email,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.phone, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.phone,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
 
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label" for="Meeting Prefences">Meeting Prefences</label>
-                <select class="form-control" onchange='changeSelect(this)' name="meeting">
-                 
-                  <option value="Video Meeting" class="cron1">Video Meeting</option> 
-                  <option value="Office Visit" class="cron1">Office Visit</option> 
-                   <option value="No Meeting" class="fixed1">I don’t need the meeting, please send me all the instructions to apply by mail</option>
+                <label class="control-label" for="Meeting Prefences"
+                  >Meeting Prefences</label
+                >
+                <select
+                  class="form-control"
+                  onchange="changeSelect(this)"
+                  name="meeting"
+                >
+                  <option value="Video Meeting" class="cron1">
+                    Video Meeting
+                  </option>
+                  <option value="Office Visit" class="cron1">
+                    Office Visit
+                  </option>
+                  <option value="No Meeting" class="fixed1">
+                    I don’t need the meeting, please send me all the
+                    instructions to apply by mail
+                  </option>
                 </select>
               </div>
             </div>
 
-            <div class="col-md-3 hideIfFixed">  
+            <div class="col-md-3 hideIfFixed">
               <div class="form-group">
-                {{ render_field(form.date, class="form-control dtpick",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.date, class="form-control
+                dtpick",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            <div class="col-md-3 hideIfFixed"> 
+            <div class="col-md-3 hideIfFixed">
               <div class="form-group">
-                {{ render_field(form.time, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.time,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-              <div class="col-md-3 hideIfFixed"> 
+            <div class="col-md-3 hideIfFixed">
               <div class="form-group">
-                {{ render_field(form.ampm, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.ampm,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-             <div class="col-md-3 hideIfFixed"> 
-       
+            <div class="col-md-3 hideIfFixed">
               <div class="form-group">
-                {{ render_field(form.countrytime, class="form-control", style="width:100%;",id="autocomplete")}}   
+                {{ render_field(form.countrytime, class="form-control",
+                style="width:100%;",id="autocomplete")}}
               </div>
             </div>
-            
-            
-            
+          </div>
 
-           </div>
-           
-           <br>
+          <br />
 
-
-            
-            <button type="submit" class="btn btn-outline-dark float-right" style="margin:5px;">Submit Request</button>
-          </form>
-        </div>  
-
-        
-        
+          <button
+            type="submit"
+            class="btn btn-outline-dark float-right"
+            style="margin: 5px"
+          >
+            Submit Request
+          </button>
+        </form>
       </div>
-      <br>
-      <br>
-
-    </div>  
-
+    </div>
+    <br />
+    <br />
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-  function changeSelect(elem){
-  if ($(elem).find('option:selected').hasClass('fixed1'))
-    $('.hideIfFixed').css('display','none');
-  else
-   $('.hideIfFixed').css('display','block');
-}
+  function changeSelect(elem) {
+    if ($(elem).find("option:selected").hasClass("fixed1"))
+      $(".hideIfFixed").css("display", "none");
+    else $(".hideIfFixed").css("display", "block");
+  }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% endblock %}

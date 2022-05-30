@@ -30,7 +30,7 @@
   
   <link href="{{url_for ('static',filename='assets/css/time.css')}}" rel="stylesheet"/> 
   <link href="{{url_for ('static',filename='assets/css/new_timeline.css')}}" rel="stylesheet"/>
-
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 
 <link rel="shortcut icon" type="image/png" href="/static/assets/images/balizero.png"/>
@@ -39,6 +39,11 @@
 
 
 <style type="text/css">
+
+html {
+  scroll-behavior: smooth;
+}
+
 .vl {
   border-left: 6px solid #040e26;
   height: 30px;
@@ -89,12 +94,31 @@
 }
 
 a.carousel-control-next.text-dark {
-    align-items: flex-start;
+    align-items: center;
     padding-top: 10px;
 }
 a.carousel-control-prev.text-dark {
-    align-items: flex-start;
+    align-items: center;
     padding-top: 10px;
+}
+#gototop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #e3242b !important;
+  color: white;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 4px;
+}
+
+#gototop:hover {
+  background-color: #555;
 }
    
 
@@ -117,7 +141,7 @@ a.carousel-control-prev.text-dark {
           <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Services  </a>
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Visa Entry/Stay Services  </a>
               <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/services/business-visa-offshore"> Business Visa Offshore</a></li>             
               <li><a class="dropdown-item" href="/services/social-visa-onshore"> Social Visa Onshore </a></li>
@@ -150,9 +174,11 @@ a.carousel-control-prev.text-dark {
   <!-- END nav -->
   {% block content %}
 {% endblock %}
+<button id="gototop" title="Go to top"><i class='fas fa-angle-up'></i></button>
+
  <section class="ftco-section ftco-about img" style="background-image: url('/static/assets/images/yoga.jpg');">      <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true"> 
+        <div class="row no-gutters slider-text align-items-center" data-scrollax-parent="true"> 
         <div class="col-md-7 ftco-animate">
           <span class="subheading" >Welcome to Bali Zero</span>
           <h1 class="mb-4">Most Recommended Visa Application Center in Bali
@@ -825,7 +851,7 @@ a.carousel-control-prev.text-dark {
                 <li><a href="#!" onclick="show()" id="btnID" class="py-2 d-block" style="color: #fff;">Whatsapp Direct Question</a></li>
                 <li><a href="/services/cozero-living" class="py-2 d-block" style="color: #fff;">COZero Living</a></li>
                 <li><a href="/" class="py-2 d-block" style="color: #fff;">Search in the website</a></li>
-                <li><a href="/#contact" class="py-2 d-block" style="color: #fff;">Contact Us</a></li>
+                <li><a href="/#kontak" class="py-2 d-block" style="color: #fff;">Contact Us</a></li>
                 
           
             </div>
@@ -959,7 +985,14 @@ a.carousel-control-prev.text-dark {
             }
         });
     });
+  
+    $('html, body').animate({
+    scrollTop: 0
+}, 1500);
 });
+
+
+
 </script>
 
 

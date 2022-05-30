@@ -1,128 +1,192 @@
-{% extends "layouts/sub.html" %}
+{% extends "layouts/sub.html" %} {% block content %}
 
-{% block content %}
-
-<div class="container card container-card" >
-
-
-    <div class="row text-center justify-content-center mb-5">
-        <div class="col-xl-12 col-lg-12">
-             {% include "includes/_message.html" %}   
-             <h2 class="font-weight-bold" style="margin-top: 40px;">{{ booking.tipe | title}}  </h2>
-        </div>
+<div class="container card container-card">
+  <div class="row text-center justify-content-center mb-5">
+    <div class="col-xl-12 col-lg-12">
+      {% include "includes/_message.html" %}
+      <h2 class="font-weight-bold" style="margin-top: 40px">
+        {{ booking.tipe | title}}
+      </h2>
     </div>
+  </div>
 
+  <div class="row">
+    <div class="col">
+      <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+        <div class="timeline-step">
+          <div
+            class="timeline-content"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-placement="top"
+            title=""
+            data-content="And here's some amazing content. It's very engaging. Right?"
+            data-original-title="2003"
+          >
+            <div class="inner-active"></div>
+            <p class="h6 text-muted mb-0 mb-lg-0">Submission</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div
+            class="timeline-content"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-placement="top"
+            title=""
+            data-content="And here's some amazing content. It's very engaging. Right?"
+            data-original-title="2004"
+          >
+            <div class="inner-active"></div>
+            <p class="h6 text-muted mb-0 mb-lg-0">Personal Information</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div
+            class="timeline-content"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-placement="top"
+            title=""
+            data-content="And here's some amazing content. It's very engaging. Right?"
+            data-original-title="2005"
+          >
+            <div class="inner-active"></div>
+            <p class="h6 text-muted mb-0 mb-lg-0">Emergency Contact</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div
+            class="timeline-content"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-placement="top"
+            title=""
+            data-content="And here's some amazing content. It's very engaging. Right?"
+            data-original-title="2010"
+          >
+            <div class="inner-circle"></div>
+
+            <p class="h6 text-muted mb-0 mb-lg-0">Travel Document</p>
+          </div>
+        </div>
+        <div class="timeline-step mb-0">
+          <div
+            class="timeline-content"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-placement="top"
+            title=""
+            data-content="And here's some amazing content. It's very engaging. Right?"
+            data-original-title="2020"
+          >
+            <div class="inner-circle"></div>
+
+            <p class="h6 text-muted mb-0 mb-lg-0">Upload Document</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="row">
-        <div class="col-md-6" style="width: 50%">
-            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                <div class="timeline-step">
-                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                        <div class="inner-active"></div>                        
-                       
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-md-6" style="width: 50%; padding-top: 15px; margin-left: -50px;">
-           <p class="h6 text-muted mb-0 mb-lg-0">Emergency Contact</p>
-        </div>
-    </div>
+      <div class="col-md-12" style="margin-top: 75px; margin-bottom: 50px">
+        <p style="font-weight: 600">
+          Emergency Contact Detail (Familly Member, etc)
+        </p>
 
-      <div class="container">
-       <div class="row">
-        
-        <div class="col-md-12" style="margin-top: 75px; margin-bottom: 50px;">
-         
-          <p style="font-weight: 600;">Emergency Contact Detail (Familly Member, etc)</p>
-         
-         {% from "includes/_formhelpers.html" import render_field %}
-            <form method="POST" enctype="multipart/form-data" id="form">
-               {{ form.hidden_tag() }}
-                       
-            
-            <div class="row">
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form method="POST" enctype="multipart/form-data" id="form">
+          {{ form.hidden_tag() }}
+
+          <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.emergency_name, class="form-control",autocomplete="off",placeholder="")}}  
+                {{ render_field(form.emergency_name,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.emergency_status, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.emergency_status,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            </div>
-            <hr>
-            <div class="row">
+          </div>
+          <hr />
+          <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                {{ render_field(form.emergency_address, class="form-control",autocomplete="off",placeholder="")}}  
+                {{ render_field(form.emergency_address,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
 
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.emergency_city, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.emergency_city,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="form-group">
-                {{ render_field(form.emergency_state, class="form-control",autocomplete="off",placeholder="")}}   
+                {{ render_field(form.emergency_state,
+                class="form-control",autocomplete="off",placeholder="")}}
               </div>
             </div>
-           
-            <div class="col-md-6">  
-              <div class="form-group">
-                {{ render_field(form.emergency_zip, class="form-control",autocomplete="off",placeholder="")}}   
-              </div>
-            </div>
-            <div class="col-md-6">  
-              <div class="form-group">
-                {{ render_field(form.emergency_country, class="form-control",autocomplete="off",placeholder="")}}   
-              </div>
-            </div>
-            </div>
-            <div class="row">
-            <hr>
-            <div class="col-md-6">  
-              <div class="form-group">
-                {{ render_field(form.emergency_email, class="form-control",autocomplete="off",placeholder="")}}   
-              </div>
-            </div>
-           
-            <div class="col-md-6">  
-              <div class="form-group">
-                {{ render_field(form.emergency_phone, class="form-control",autocomplete="off",placeholder="")}}   
-              </div>
-            </div>
-            
-           </div>
-           <br>
-           <br>
 
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ render_field(form.emergency_zip,
+                class="form-control",autocomplete="off",placeholder="")}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ render_field(form.emergency_country,
+                class="form-control",autocomplete="off",placeholder="")}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <hr />
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ render_field(form.emergency_email,
+                class="form-control",autocomplete="off",placeholder="")}}
+              </div>
+            </div>
 
-              <button type="submit" class="btn btn-outline-dark float-right" style="margin:5px;">Next Step</button>
-            <a href="/sub/step2/{{url }}" class="btn btn-outline-dark float-right" style="margin:5px;">Previous Step</a>
-          </form>
-        </div>  
+            <div class="col-md-6">
+              <div class="form-group">
+                {{ render_field(form.emergency_phone,
+                class="form-control",autocomplete="off",placeholder="")}}
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
 
-        
-        
+          <button
+            type="submit"
+            class="btn btn-outline-dark float-right"
+            style="margin: 5px"
+          >
+            Next Step
+          </button>
+          <a
+            href="/sub/step2/{{url }}"
+            class="btn btn-outline-dark float-right"
+            style="margin: 5px"
+            >Previous Step</a
+          >
+        </form>
       </div>
-      <br>
-      <br>
-
-    </div>  
-
-
-
-
-
-
-
-
-
+    </div>
+    <br />
+    <br />
+  </div>
 </div>
 
 {% endblock %}

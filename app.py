@@ -194,6 +194,7 @@ class Leads(db.Model):
     name = db.Column(db.String(200))
     email = db.Column(db.String(200))  
     services = db.Column(db.String(200))
+    new = db.Column(db.Integer)
 
 class BlogPost(db.Model):
     id = db.Column(db.Integer,primary_key=True)
@@ -393,12 +394,10 @@ def Index():
             email = request.form["email"]
             if "@" in email:           
                 time = request.form["vehicle"]
-                purpose = request.form["manufacturer"]
-
-                if purpose == "Tourism":                                                     
-                    lead = Leads(name=request.form["name"],email=request.form["email"],services=purpose)
-                    db.session.add(lead)
-                    db.session.commit()        
+                purpose = request.form["manufacturer"]                                                    
+                lead = Leads(name=request.form["name"],email=request.form["email"],services=purpose)
+                db.session.add(lead)
+                db.session.commit()        
                 return redirect(url_for("Result",time=time,purpose=purpose))                       
             else:
                  return redirect(url_for("EnterEmail"))            
@@ -1177,7 +1176,7 @@ def DeleteBlog(id):
 if __name__ == "__main__":
 	#manager.run()
 	app.jinja_env.cache = {}
-	app.run(host='0.0.0.0',threaded=True)	
+	app.run(host='0.0.0.0', threaded=True, port=5001)	
 
 
 

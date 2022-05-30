@@ -1,47 +1,35 @@
-{% extends "layouts/main.html" %}
-
-{% block title %}
+{% extends "layouts/main.html" %} {% block title %}
 <title>Internal - My Leads</title>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <main class="d-flex align-items-center">
-    <div class="container">
-       
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="margin-top: 70px; margin-bottom: 20px">
+        <h3 style="font-weight: bold; font-size: 22px">Leads List</h3>
+      </div>
+      <div class="col-md-12" style="margin-bottom: 50px">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Interested to</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in all_leads %}
 
-       <div class="row">
-         <div class="col-md-12" style="margin-top:  70px; margin-bottom: 20px;">
-     
-          <h3 style="font-weight: bold; font-size: 22px;">Leads List</h3>
-        </div>      
-        <div class="col-md-12" style="margin-bottom: 50px;">
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>                
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>  
-                <th scope="col">Interested to</th>    
-               
-              </tr>
-            </thead>
-            <tbody>
-              {% for x in all_leads %}
-
-              <tr>
-                <th>{{x.name}}</th>
-                <td>{{x.email}}</td>
-                <td>{{x.services}}</td>
-              
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>    
-        </div>           
-      </div>     
-
+            <tr class="{{'highlight' if x.new==1}}">
+              <th>{{x.name}}</th>
+              <td>{{x.email}}</td>
+              <td>{{x.services}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </main>
 
 {% endblock %}
-    
-  
